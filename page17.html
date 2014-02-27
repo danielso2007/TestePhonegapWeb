@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Teste</title>
+	
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
+	<link rel="stylesheet" href="css/jqm-demos.css">
+	
+	<link rel="shortcut icon" href="icon.png">
+	
+	<script type="text/javascript" src="phonegap.js"></script>
+	
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.mobile-1.4.0.min.js"></script>
+	
+	
+	
+	<script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+		    $.mobile.buttonMarkup.hoverDelay = true;
+		    $.mobile.touchOverflowEnabled = true;
+		    $.mobile.phonegapNavigationEnabled = true;
+		    $.mobile.pushStateEnabled = false;
+		    $.mobile.ajaxEnabled = false;
+		});
+		$(document).bind('pageinit', function () {
+
+		});
+
+
+		$(document).ready(function () {
+
+		
+			// !! Assumes filePath is a valid path on the device
+
+			var fileTransfer = new FileTransfer();
+			var uri = encodeURI("http://some.server.com/download.php");
+
+			fileTransfer.onprogress = function(progressEvent) {
+				    if (progressEvent.lengthComputable) {
+				      loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
+				    } else {
+				      loadingStatus.increment();
+				    }
+				};
+
+			fileTransfer.download(
+			    uri,
+			    filePath,
+			    function(entry) {
+				console.log("download complete: " + entry.fullPath);
+			    },
+			    function(error) {
+				console.log("download error source " + error.source);
+				console.log("download error target " + error.target);
+				console.log("upload error code" + error.code);
+			    },
+			    false,
+			    {
+				headers: {
+				    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+				}
+			    }
+			);
+		
+		});
+
+
+
+		
+		function loadPopup(e, msg, themeBt) {
+			var $this = $( e ),
+				theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+				msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+				textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+				textonly = !!$this.jqmData( "textonly" );
+				html = $this.jqmData( "html" ) || "";
+			$.mobile.loading( "show", {
+					text: msg,
+					textVisible: true,
+					theme: themeBt,
+					textonly: false,
+					html: html
+			});
+		}
+    </script>
+</head>
+
+<body>
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="pageButtonsLogin" data-theme="a">
+
+	<div role="main" class="ui-content" >
+		
+
+    <h1>Example</h1>
+    <p>Dowanload File</p>
+
+
+	</div><!-- /content -->
+	
+</div><!-- /page one -->
+
+
+
+</body>
+</html>
+

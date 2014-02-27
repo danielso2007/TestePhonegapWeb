@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Teste</title>
+	
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
+	<link rel="stylesheet" href="css/jqm-demos.css">
+	
+	<link rel="shortcut icon" href="icon.png">
+	
+	<script type="text/javascript" src="phonegap.js"></script>
+	
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.mobile-1.4.0.min.js"></script>
+	
+	
+	
+	<script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+		    $.mobile.buttonMarkup.hoverDelay = true;
+		    $.mobile.touchOverflowEnabled = true;
+		    $.mobile.phonegapNavigationEnabled = true;
+		    $.mobile.pushStateEnabled = false;
+		    $.mobile.ajaxEnabled = false;
+		});
+		$(document).bind('pageinit', function () {
+
+		});
+		$(document).ready(function () {
+
+			// The watch id references the current `watchAcceleration`
+			var watchID = null;
+
+			// Wait for device API libraries to load
+			//
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			// device APIs are available
+			//
+			function onDeviceReady() {
+				startWatch();
+			}
+
+			// Start watching the acceleration
+			//
+			function startWatch() {
+
+				// Update acceleration every 3 seconds
+				var options = { frequency: 3000 };
+
+				watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+			}
+
+			// Stop watching the acceleration
+			//
+			function stopWatch() {
+				if (watchID) {
+					navigator.accelerometer.clearWatch(watchID);
+					watchID = null;
+				}
+			}
+
+			// onSuccess: Get a snapshot of the current acceleration
+			//
+			function onSuccess(acceleration) {
+				var element = document.getElementById('accelerometer');
+				element.innerHTML = 'Acceleration X: ' + acceleration.x         + '<br />' +
+									'Acceleration Y: ' + acceleration.y         + '<br />' +
+									'Acceleration Z: ' + acceleration.z         + '<br />' +
+									'Timestamp: '      + acceleration.timestamp + '<br />';
+			}
+
+			// onError: Failed to get the acceleration
+			//
+			function onError() {
+				alert('onError!');
+			}
+			
+		
+		});
+		
+		function loadPopup(e, msg, themeBt) {
+			var $this = $( e ),
+				theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+				msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+				textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+				textonly = !!$this.jqmData( "textonly" );
+				html = $this.jqmData( "html" ) || "";
+			$.mobile.loading( "show", {
+					text: msg,
+					textVisible: true,
+					theme: themeBt,
+					textonly: false,
+					html: html
+			});
+		}
+    </script>
+</head>
+
+<body>
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="pageButtonsLogin" data-theme="a">
+
+	<div role="main" class="ui-content" >
+		<div>
+			<div class="center" style="margin-top: 2.4em;">
+                  <div id="accelerometer">Waiting for accelerometer...</div>
+			</div>
+		</div>
+	</div><!-- /content -->
+	
+</div><!-- /page one -->
+
+
+
+</body>
+</html>
+

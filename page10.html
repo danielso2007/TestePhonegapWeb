@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Teste</title>
+	
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
+	<link rel="stylesheet" href="css/jqm-demos.css">
+	
+	<link rel="shortcut icon" href="icon.png">
+	
+	<script type="text/javascript" src="phonegap.js"></script>
+	
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.mobile-1.4.0.min.js"></script>
+	
+	
+	
+	<script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+		    $.mobile.buttonMarkup.hoverDelay = true;
+		    $.mobile.touchOverflowEnabled = true;
+		    $.mobile.phonegapNavigationEnabled = true;
+		    $.mobile.pushStateEnabled = false;
+		    $.mobile.ajaxEnabled = false;
+		});
+		$(document).bind('pageinit', function () {
+
+		});
+		$(document).ready(function () {
+
+		
+			// Wait for device API libraries to load
+			//
+			document.addEventListener("deviceready", onDeviceReady, false);
+		
+		});
+		
+		
+		
+
+		// Global InAppBrowser reference
+		var iabRef = null;
+
+		function iabLoadStart(event) {
+			alert(event.type + ' - ' + event.url);
+		}
+
+		function iabLoadStop(event) {
+			alert(event.type + ' - ' + event.url);
+		}
+
+		function iabLoadError(event) {
+			alert(event.type + ' - ' + event.message);
+		}
+
+		function iabClose(event) {
+			 alert(event.type);
+			 iabRef.removeEventListener('loadstart', iabLoadStart);
+			 iabRef.removeEventListener('loadstop', iabLoadStop);
+			 iabRef.removeEventListener('loaderror', iabLoadError);
+			 iabRef.removeEventListener('exit', iabClose);
+		}
+
+		// device APIs are available
+		//
+		function onDeviceReady() {
+			 iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+			 iabRef.addEventListener('loadstart', iabLoadStart);
+			 iabRef.addEventListener('loadstop', iabLoadStop);
+			 iabRef.addEventListener('loaderror', iabLoadError);
+			 iabRef.addEventListener('exit', iabClose);
+		}
+		
+		
+		function loadPopup(e, msg, themeBt) {
+			var $this = $( e ),
+				theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+				msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+				textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+				textonly = !!$this.jqmData( "textonly" );
+				html = $this.jqmData( "html" ) || "";
+			$.mobile.loading( "show", {
+					text: msg,
+					textVisible: true,
+					theme: themeBt,
+					textonly: false,
+					html: html
+			});
+		}
+    </script>
+</head>
+
+<body>
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="pageButtonsLogin" data-theme="a">
+
+	<div role="main" class="ui-content" >
+		<div>
+			<div class="center" style="margin-top: 2.4em;">
+
+			</div>
+		</div>
+	</div><!-- /content -->
+	
+</div><!-- /page one -->
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Teste</title>
+	
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
+	<link rel="stylesheet" href="css/jqm-demos.css">
+	
+	<link rel="shortcut icon" href="icon.png">
+	
+	<script type="text/javascript" src="phonegap.js"></script>
+	
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.mobile-1.4.0.min.js"></script>
+	
+	
+	
+	<script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+		    $.mobile.buttonMarkup.hoverDelay = true;
+		    $.mobile.touchOverflowEnabled = true;
+		    $.mobile.phonegapNavigationEnabled = true;
+		    $.mobile.pushStateEnabled = false;
+		    $.mobile.ajaxEnabled = false;
+		});
+		$(document).bind('pageinit', function () {
+
+		});
+
+		$(document).ready(function () {
+
+		
+
+function win(r) {
+    console.log("Code = " + r.responseCode);
+    console.log("Response = " + r.response);
+    console.log("Sent = " + r.bytesSent);
+	}
+
+	function fail(error) {
+	    alert("An error has occurred: Code = " + error.code);
+	    console.log("upload error source " + error.source);
+	    console.log("upload error target " + error.target);
+	}
+
+	var uri = encodeURI("http://some.server.com/upload.php");
+
+	var options = new FileUploadOptions();
+	options.fileKey="file";
+	options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
+	options.mimeType="text/plain";
+
+	var headers={'headerParam':'headerValue'};
+
+	options.headers = headers;
+
+	var ft = new FileTransfer();
+
+	ft.onprogress = function(progressEvent) {
+	    if (progressEvent.lengthComputable) {
+	      loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
+	    } else {
+	      loadingStatus.increment();
+	    }
+	};
+
+	ft.upload(fileURI, uri, win, fail, options);
+
+			
+		
+		});
+		
+	
+        
+
+};
+
+    </script>
+</head>
+
+<body>
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="pageButtonsLogin" data-theme="a">
+
+	<div role="main" class="ui-content" >
+		
+
+
+    <h1>Example</h1>
+    <p>Upload File</p>
+
+
+
+	</div><!-- /content -->
+	
+</div><!-- /page one -->
+
+
+
+</body>
+</html>
+

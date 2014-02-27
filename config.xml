@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.teste"
+        versionCode = "1.0" 
+        version     = "1.0.0" >
+		
+    <name>Teste</name>
+	
+    <description>
+        Projeto Teste.
+    </description>
+	
+    <author email="support@pinngo.com" href="http://pinngo.com">
+        Teste Team.
+    </author>
+	
+    <feature name="http://api.phonegap.com/1.0/device" />
+    <!--<preference name="phonegap-version" value="3.2.0" />-->
+	
+	<!--
+       Se você não quer que nenhuma permissão para ser adicionado ao seu aplicativo, 
+	   adicione a seguinte tag para seu config.xml, você ainda terá a permissão INTERNET 
+	   em sua aplicação, o que requer PhoneGap.
+    -->
+    <preference name="permissions" value="none" />
+	
+	<!-- Personalize o seu aplicativo e da plataforma com o elemento de preferência. -->
+    <preference name="orientation" value="portrait" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="false" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="prerendered-icon" value="true" />  <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />  <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
+    <preference name="detect-data-types" value="true" />  <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
+    <preference name="exit-on-suspend" value="false" />  <!-- ios: if set to true, app will terminate when home button is pressed -->
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />  <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+    <preference name="disable-cursor" value="false" />  <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
+    <preference name="LoadUrlTimeoutValue" value="10000"/>
+    <!--<preference name="SplashScreen" value="screen"/>-->
+    <preference name="SplashScreenDelay" value="2000"/>
+    <preference name="android-minSdkVersion" value="13" />
+    <preference name="android-installLocation" value="auto" />  <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+	
+	<!-- Plugins -->
+
+	
+    <!-- Core plugins -->
+    <!-- Core plugins -->
+    <gap:plugin name="org.apache.cordova.battery-status" />
+    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.media-capture" />
+    <gap:plugin name="org.apache.cordova.console" />
+    <gap:plugin name="org.apache.cordova.contacts" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.device-motion" />
+    <gap:plugin name="org.apache.cordova.device-orientation" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.file-transfer" />
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="org.apache.cordova.globalization" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="org.apache.cordova.vibration" />
+	
+	<!-- Define app icon for each platform. -->
+    <icon src="icon.png" />
+	
+    <access origin="*" />
+    <access origin="*maps.google.com*"/>
+    <access origin="*.google.com*" />
+    <access origin="*.googleapis.com*" />
+    <access origin="*.gstatic.com" />
+    <access origin="*.googleusercontent.com" />
+    <access origin="*google.com*"/>
+    <access origin="*googleapis.com*" subdomains="true" />
+    <access origin="*gstatic.com*" subdomains="true" />
+    <access origin="*googleusercontent.com*" subdomains="true" />
+    <content src="index.html" />
+</widget>

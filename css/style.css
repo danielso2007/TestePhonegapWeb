@@ -1,0 +1,372 @@
+@font-face {
+	font-family: fontPinngo;
+	src: url(DANUBE__.TTF);
+}
+
+.fontPinngo {
+    font-family:fontPinngo;
+}
+
+body {
+    height:100%;
+    margin:0px;
+    padding:0px;
+	padding-top: 0px;
+    width:100%;
+}
+
+/* MAPA */
+#map-page {
+	width: 100%;
+	height: 100%;
+	padding-top: 0px !important;
+}
+#map-canvas {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+}
+
+#mapPage {
+	width:100%;
+	height:100%;
+	position: relative;
+	text-align: center
+	;vertical-align:middle;
+}
+
+#markerSelected {
+	position: absolute;
+	background: white;
+	width:97%;
+	height:100px;
+	display: none;
+	bottom: 12px;
+	left: 6px;
+	box-shadow:
+	4px 4px 8px #888888;
+	border-radius:5px;
+}
+
+#listPage {
+	margin: 60px 13px 13px 13px;
+	position: relative;
+	display: none;
+	border-style: none !important;
+}
+
+#listPage .ui-listview>.ui-li-static {
+	border-width: 0px 0 0;
+	border-style: none;
+}
+
+/* PROBLEMAS CORREÇÕES */
+.ui-page {-webkit-backface-visibility: hidden;}
+
+.textColor {color:#94298D;}
+.textColor2 {color:#3ABEB6;}
+
+#bodyIndex a:link {color:#94298D;;}
+#bodyIndex a:visited {color: #94298D; !important;}
+
+/* COR DOS TEXTOS BOTOÃO E LINKS */
+.ui-btn-text {color:#94298D;;}
+
+/*
+.ui-header a:visited {color: #FFFFFF !important;}
+.ui-header a:link { color: #FFFFFF;}
+*/
+
+.ui-header .ui-btn-active {
+    border: 1px solid #000000;
+}
+
+.ui-btn-active {
+    border: 1px solid #FFFFFF;
+    background: #5393c5;
+    background-color: transparent;
+    font-weight: 700;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-decoration: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+.ui-page .ui-btn {
+    -webkit-border-radius: 0.3em /*{global-radii-buttons}*/;
+    border-radius: 0.3em /*{global-radii-buttons}*/;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+}
+
+.center {
+    display: block;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerLogo {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerLogoPage {
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---- AJUSTES ESPECIFICOS ---- */
+.areaBotoesAbaixoMetadeTela {
+    top: 1em;
+    display: block;
+    width: 100%;
+}
+
+
+/* ---- IMAGEM PROFILE ---- */
+
+#left-panel P {
+    margin-top: 1.5em;
+}
+
+#left-panel .imagemProfile {
+    width: 64px;
+    height: 64px;
+    border-radius: 0;
+    margin-top: 0.2em;
+    margin-left: 0.4em;
+}
+
+/* ---- FIM ---- */
+
+
+
+
+
+
+/* ---- PAINEL LATERAL PRINCIPAL ---- */
+
+#left-panel a:visited {color: #FFFFFF !important;}
+#left-panel a:link { color: #FFFFFF;}
+
+.tabelaPontuacao {
+    width: 100%;
+}
+.tabelaLeft {
+    width: 50%;text-align: left;padding:0px;
+}
+.tabelaRight {
+    text-align: right;padding:0px;
+}
+.tabelaPontuacao H1 {
+    margin: 0;
+}
+
+/* ---- FIM ---- */
+
+
+
+
+
+/* ---- Header Principal.html buttons ---- */
+.ui-navbar li .ui-btn {
+    display: block;
+    text-align: center;
+    margin: 2px -1px 3px 0;
+    border-right-width: 0;
+}
+.jqm-header a:visited {color: #FFFFFF !important;}
+.jqm-header a:link { color: #FFFFFF;}
+
+.jqm-header a .ui-btn-text {color:#FFFFFF;}
+
+.jqm-header > .ui-btn {
+    width: 40px;
+    height: 32px;
+    /*border-radius: 0;*/
+}
+
+.ui-btn-up-a {
+    border: none;
+}
+
+.ui-btn-hover-a {
+    border: none;
+}
+
+.ui-btn-down-a {
+    border: none;
+}
+
+.jqm-header .jqm-navmenu-link {
+    left: 5px;
+}
+.jqm-header  .ui-btn,
+.jqm-header  .ui-btn .ui-icon {
+    box-shadow: none;
+}
+/* Custom icons */
+.jqm-header  .ui-btn .ui-icon {
+    background-image: url(images/config_sd.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+}
+.jqm-header .jqm-navmenu-link .ui-icon {
+    background-position: 0px 50%;
+}
+
+.buttonConfig .ui-btn-text{
+    margin: -16px;
+    margin-top: -16px;
+}
+.buttonConfig .ui-btn-inner {margin-top: -8px;}
+.buttonConfig img{
+    width: 32px;
+    height: 32px;
+}
+
+.navBarPrincipal {
+    width: 40%;
+    margin: auto;
+    color: white;
+}
+/* ---- FIM - Header buttons ---- */
+
+.loadPage {
+  width: 100%;
+  height: 100%;
+  background: white url(images/carregando.gif) no-repeat 50% 50%;
+}
+
+
+
+/* ---- PAGINA MISSAO SELECT ---- */
+
+.contentPageMission {
+    font-size: 14px;
+    text-align:justify;
+    text-justify:inter-word;
+}
+
+.locationPoints {
+    margin:5px 20% 10px 20%;
+    background-color: white;
+    text-align: center;
+    box-shadow: 3px 3px 10px #888888;
+    border-radius:55px;
+}
+
+.divPointsMission {
+    padding: 8px 8px 8px 8px;
+}
+
+.divPointsMission span {
+    font-size: 38px;
+    text-align:justify;
+    text-justify:inter-word;
+    color: #404040;
+    font-weight: bolder;
+}
+
+.divPointsMission #labelPoints {
+    font-size: 15px;
+    text-align:justify;
+    text-justify:inter-word;
+    color: gray;
+}
+
+/* - mensagens abaixo da pontuação - */
+.locationMessages {
+    margin:10px 1% 0px 1%;
+    background-color: white;
+    box-shadow: 3px 3px 10px #888888;
+    border-radius:5px;
+}
+
+.interMessages {
+    padding: 5px 8px 5px 8px;
+}
+
+.tituloMissao {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 17px;
+    color: #505050;
+}
+
+.textoMissaos {
+    font-weight: bolder;
+    text-align: left;
+    font-size: 13px;
+    color: #787878;
+}
+
+.tableImgsLabes {
+    border-spacing: 3px;
+    border-collapse: separate;
+}
+
+.tableLabels {
+    font-weight: bolder;
+    font-size: 12px;
+    color: #484848;
+}
+
+.requiredsLabels {
+    font-weight: bolder;
+    font-size: 11px;
+    color: #FF6600;
+}
+
+
+
+
+
+/* ---- PORTRAIT ---- */
+@media screen and (orientation:portrait) {
+
+    .centerLogo {
+        margin-top: 3.5em;
+        margin-bottom: 3em;
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .center {
+        display: block;
+        width: 97%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* ---- AJUSTES ESPECIFICOS ---- */
+    .areaBotoesAbaixoMetadeTela {
+        margin-top: 7em;
+        margin-bottom: 3em;
+        display: block;
+        width: 100%;
+    }
+
+}
+
