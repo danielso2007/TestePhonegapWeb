@@ -16,7 +16,7 @@
     </author>
 	
     <feature name="http://api.phonegap.com/1.0/device" />
-    <!--<preference name="phonegap-version" value="3.2.0" />-->
+    <preference name="phonegap-version" value="3.2.0" />
 	
 	<!--
        Se você não quer que nenhuma permissão para ser adicionado ao seu aplicativo, 
