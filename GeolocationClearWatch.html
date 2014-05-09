@@ -72,8 +72,11 @@
 				// onError Callback receives a PositionError object
 				//
 				function onError(error) {
-				  alert('code: '    + error.code    + '\n' +
-						'message: ' + error.message + '\n');
+				  //alert('code: '    + error.code    + '\n' +
+				//		'message: ' + error.message + '\n');
+				var element = document.getElementById('error');
+				element.innerHTML = '\ncode: '    + error.code    + '\n' +
+						'message: ' + error.message + '\n';
 				}
 		
 		
@@ -108,7 +111,7 @@
 					<h1>Example</h1>
 					<p id="geolocation">Watching geolocation...</p>
 					<button onclick="clearWatch();">Clear Watch</button>
-					
+					<p id="error">...</p>
 					<p>
 					Parar de acompanhar por mudanças para a localização do dispositivo referenciados pelo watchID parâmetro.
 </p>
