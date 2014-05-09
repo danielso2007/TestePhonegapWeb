@@ -9,7 +9,10 @@
 <link rel="stylesheet" href="css/jquery.mobile-1.4.1.min.css">
 <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.1.min.css">
 <link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/jqm-demos.css">
+<link rel="stylesheet" href="css/jqm-demos.css">  
+<link rel="stylesheet" href="css/index.css" />
+<link rel="stylesheet" href="css/prettify.css">
+
 <link rel="shortcut icon" href="icon.png">
 
 <script type="text/javascript" src="phonegap.js"></script>
@@ -43,7 +46,7 @@
 			//
 			function onDeviceReady() {
 				// Throw an error if no update is received every 30 seconds
-				var options = { timeout: 30000 };
+				var options = { timeout: 5000, timeout: 5000, enableHighAccuracy: true };
 				watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
 			}
 
@@ -117,6 +120,20 @@
 <b>Descrição</b><br/>
  geolocation.watchPosition é uma função assíncrona. Ele retorna a posição atual do dispositivo, quando uma mudança de posição é detectada. Quando o dispositivo recupera um novo local, o geolocationSuccess callback executa com uma Position de objeto como parâmetro. Se houver um erro, o geolocationError de retorno é executado com um PositionError objecto como o parâmetro.
  </p>
+ 
+ 
+<h1><a name="geolocationOptions">GeolocationOptions</a></h1>
+ <p>Parâmetros opcionais para personalizar a recuperação da geolocalização
+<code><a href="#">Position</a></code>.</p>
+<pre class="prettyprint"><code><span class="pun">{</span><span class="pln"> maximumAge</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3000</span><span class="pun">,</span><span class="pln"> timeout</span><span class="pun">:</span><span class="pln"> </span><span class="lit">5000</span><span class="pun">,</span><span class="pln"> enableHighAccuracy</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">};</span><span class="pln"><br></span></code></pre>
+<h2><a name="geolocationOptions_options">Opções</a></h2>
+<ul>
+<li><p><strong>enableHighAccuracy</strong>:  fornece um indício de que o aplicativo precisa os melhores resultados possíveis. Por padrão, o dispositivo tenta recuperar a Position através de métodos baseados em rede. Definir essa propriedade como true conta a estrutura para usar métodos mais precisos, como o posicionamento por satélite. (Boolean)</p></li>
+<li><p><strong>timeout</strong>: O comprimento máximo de tempo (milissegundos) que é permitida a passagem da chamada para geolocation.getCurrentPosition ou geolocation.watchPosition até o correspondente geolocationSuccess callback executada. Se o geolocationSuccess callback não é invocado dentro deste tempo, a geolocationError callback é passado um PositionError .TIMEOUT código de erro. (Note-se que, quando usado em conjunto com geolocation.watchPosition , o geolocationError de retorno poderia ser chamada em cada intervalo timeout milissegundos!) (Número)</p></li>
+<li><p><strong>maximumAge</strong>: Aceitar uma posição em cache cuja idade não é maior do que o tempo especificado em milissegundos (Number)</p></li>
+</ul>
+ 
+ 
 				</div>
 			</div>
 		</div>

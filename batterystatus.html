@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teste</title>
+
+<link rel="stylesheet" href="css/jquery.mobile-1.4.1.min.css">
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.1.min.css">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/jqm-demos.css">
+<link rel="stylesheet" href="css/prettify.css">
+
+<link rel="shortcut icon" href="icon.png">
+
+<script type="text/javascript" src="phonegap.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.1.min.js"></script>
+
+
+
+<script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+		    $.mobile.buttonMarkup.hoverDelay = true;
+		    $.mobile.touchOverflowEnabled = true;
+		    $.mobile.phonegapNavigationEnabled = true;
+		    $.mobile.pushStateEnabled = false;
+		    $.mobile.ajaxEnabled = false;
+		});
+		$(document).bind('pageinit', function () {
+
+		});
+		$(document).ready(function () {
+
+		
+			// Wait for device API libraries to load
+			//
+			function onLoad() {
+				document.addEventListener("deviceready", onDeviceReady, false);
+			}
+
+			// device APIs are available
+			//
+			function onDeviceReady() {
+				window.addEventListener("batterystatus", onBatteryStatus, false);
+			}
+
+			// Handle the batterystatus event
+			//
+			function onBatteryStatus(info) {
+				console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+			}
+		
+		
+		});
+		
+		function loadPopup(e, msg, themeBt) {
+			var $this = $( e ),
+				theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+				msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+				textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+				textonly = !!$this.jqmData( "textonly" );
+				html = $this.jqmData( "html" ) || "";
+			$.mobile.loading( "show", {
+					text: msg,
+					textVisible: true,
+					theme: themeBt,
+					textonly: false,
+					html: html
+			});
+		}
+    </script>
+</head>
+
+<body>
+
+	<!-- Start of first page: #one -->
+	<div data-role="page" id="pageButtonsLogin" data-theme="a">
+
+		<div role="main" class="ui-content">
+			<div>
+				<div class="center" style="margin-top: 2.4em;">
+					<h1>Battery Low</h1>
+					
+					
+				
+				
+					<button onclick="onLoad();">Verificar Bateria</button>
+					
+					
+					
+					
+					<hr>
+
+<h1><a name="batterystatus">batterystatus</a></h1>
+
+<p>The event fires when there is a change in the battery status.</p>
+
+<pre class="prettyprint"><code>window.<a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener">addEventListener</a>("<a href="cordova_events_events.md.html#batterystatus">batterystatus</a>", yourCallbackFunction, false);
+</code></pre>
+
+<h2><a name="batterystatus_details">Details</a></h2>
+
+<p>This event fires when the percentage of battery charge changes by at
+least 1 percent, or if the device is plugged in or unplugged.</p>
+
+<p>The battery status handler is passed an object that contains two
+properties:</p>
+
+<ul>
+<li><p><strong>level</strong>: The percentage of battery charge (0-100). <em>(Number)</em></p></li>
+<li><p><strong>isPlugged</strong>: A boolean that indicates whether the device is plugged in. <em>(Boolean)</em></p></li>
+</ul>
+
+<p>Applications typically should use <code>window.<a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener">addEventListener</a></code> to
+attach an event listener once the <code><a href="cordova_events_events.md.html#deviceready">deviceready</a></code> event fires.</p>
+
+<h2><a name="batterystatus_supported_platforms">Supported Platforms</a></h2>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>iOS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>Windows Phone 7 and 8</li>
+<li>Tizen</li>
+</ul>
+
+<h2><a name="batterystatus_windows_phone_7_and_8_quirks">Windows Phone 7 and 8 Quirks</a></h2>
+
+<p>Windows Phone 7 does not provide native APIs to determine battery
+level, so the <code>level</code> property is unavailable.  The <code>isPlugged</code>
+parameter <em>is</em> supported.</p>
+
+<h2><a name="batterystatus_quick_example">Quick Example</a></h2>
+
+<pre class="prettyprint"><code>window.<a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener">addEventListener</a>("<a href="cordova_events_events.md.html#batterystatus">batterystatus</a>", onBatteryStatus, false);
+
+function onBatteryStatus(info) {
+    // Handle the <a href="cordova_events_events.md.html#online">online</a> event
+    console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+}
+</code></pre>
+
+<h2><a name="batterystatus_full_example">Full Example</a></h2>
+
+<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;<a href="cordova_device_device.md.html#Device">Device</a> Ready Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.<a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener">addEventListener</a>("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        window.<a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener">addEventListener</a>("<a href="cordova_events_events.md.html#batterystatus">batterystatus</a>", onBatteryStatus, false);
+    }
+
+    // Handle the <a href="cordova_events_events.md.html#batterystatus">batterystatus</a> event
+    //
+    function onBatteryStatus(info) {
+        console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+					
+					
+				</div>
+			</div>
+		</div>
+		<!-- /content -->
+
+	</div>
+	<!-- /page one -->
+
+
+
+</body>
+</html>
+

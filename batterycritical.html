@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teste</title>
+
+<link rel="stylesheet" href="css/jquery.mobile-1.4.1.min.css">
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.1.min.css">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/jqm-demos.css">
+<link rel="stylesheet" href="css/prettify.css">
+
+<link rel="shortcut icon" href="icon.png">
+
+<script type="text/javascript" src="phonegap.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.1.min.js"></script>
+
+
+
+<script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+		    $.mobile.buttonMarkup.hoverDelay = true;
+		    $.mobile.touchOverflowEnabled = true;
+		    $.mobile.phonegapNavigationEnabled = true;
+		    $.mobile.pushStateEnabled = false;
+		    $.mobile.ajaxEnabled = false;
+		});
+		$(document).bind('pageinit', function () {
+
+		});
+		$(document).ready(function () {
+
+		
+			// Wait for device API libraries to load
+			//
+			function onLoad() {
+				document.addEventListener("deviceready", onDeviceReady, false);
+			}
+
+			// device APIs are available
+			//
+			function onDeviceReady() {
+				window.addEventListener("batterycritical", onBatteryCritical, false);
+			}
+
+			// Handle the batterycritical event
+			//
+			function onBatteryCritical(info) {
+				alert("Battery Level Critical " + info.level + "%\nRecharge Soon!");
+			}
+		
+		
+		});
+		
+		function loadPopup(e, msg, themeBt) {
+			var $this = $( e ),
+				theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+				msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+				textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+				textonly = !!$this.jqmData( "textonly" );
+				html = $this.jqmData( "html" ) || "";
+			$.mobile.loading( "show", {
+					text: msg,
+					textVisible: true,
+					theme: themeBt,
+					textonly: false,
+					html: html
+			});
+		}
+    </script>
+</head>
+
+<body>
+
+	<!-- Start of first page: #one -->
+	<div data-role="page" id="pageButtonsLogin" data-theme="a">
+
+		<div role="main" class="ui-content">
+			<div>
+				<div class="center" style="margin-top: 2.4em;">
+					<h1>Battery Critical</h1>
+					
+					
+				
+				
+					<button onclick="onLoad();">Verificar Bateria</button>
+					
+					
+					
+					
+					<hr>
+
+<h1><a name="batterycritical">batterycritical</a></h1>
+
+<p>The event fires when the battery has reached the critical level
+threshold.</p>
+
+<pre class="prettyprint"><code>window.<a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener">addEventListener</a>("<a href="cordova_events_events.md.html#batterycritical">batterycritical</a>", yourCallbackFunction, false);
+</code></pre>
+
+<h2><a name="batterycritical_details">Details</a></h2>
+
+<p>The event fires when the percentage of battery charge has reached the
+critical battery threshold. The value is device-specific.</p>
+
+<p>The <code><a href="cordova_events_events.md.html#batterycritical">batterycritical</a></code> handler is passed an object that contains two
+properties:</p>
+
+<ul>
+<li><p><strong>level</strong>: The percentage of battery charge (0-100). <em>(Number)</em></p></li>
+<li><p><strong>isPlugged</strong>: A boolean that indicates whether the device is plugged in. <em>(Boolean)</em></p></li>
+</ul>
+
+<p>Applications typically should use <code>window.<a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener">addEventListener</a></code> to attach
+an event listener once the <code><a href="cordova_events_events.md.html#deviceready">deviceready</a></code> event fires.</p>
+
+<h2><a name="batterycritical_supported_platforms">Supported Platforms</a></h2>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>iOS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>Tizen</li>
+</ul>
+
+<h2><a name="batterycritical_quick_example">Quick Example</a></h2>
+
+<pre class="prettyprint"><code>window.<a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener">addEventListener</a>("<a href="cordova_events_events.md.html#batterycritical">batterycritical</a>", onBatteryCritical, false);
+
+function onBatteryCritical(info) {
+    // Handle the battery critical event
+    alert("Battery Level Critical " + info.level + "%\nRecharge Soon!");
+}
+</code></pre>
+
+<h2><a name="batterycritical_full_example">Full Example</a></h2>
+
+<pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Battery Critical Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.<a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener">addEventListener</a>("<a href="cordova_events_events.md.html#deviceready">deviceready</a>", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        window.<a href="cordova_inappbrowser_inappbrowser.md.html#addEventListener">addEventListener</a>("<a href="cordova_events_events.md.html#batterycritical">batterycritical</a>", onBatteryCritical, false);
+    }
+
+    // Handle the <a href="cordova_events_events.md.html#batterycritical">batterycritical</a> event
+    //
+    function onBatteryCritical(info) {
+        alert("Battery Level Critical " + info.level + "%\nRecharge Soon!");
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+					
+					
+				</div>
+			</div>
+		</div>
+		<!-- /content -->
+
+	</div>
+	<!-- /page one -->
+
+
+
+</body>
+</html>
+

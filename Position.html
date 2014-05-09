@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.1.min.css">
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/jqm-demos.css">
+<link rel="stylesheet" href="css/prettify.css">
+
 <link rel="shortcut icon" href="icon.png">
 
 <script type="text/javascript" src="phonegap.js"></script>
@@ -94,7 +96,7 @@
 			<div>
 				<div class="center" style="margin-top: 2.4em;">
 					<h1>Example</h1>
-					<div id="myDiv"></div>
+					<p id="geolocation">Finding geolocation...</p>
 					
 					
 					<p>
@@ -113,6 +115,46 @@
 A Position de objeto é criado e preenchido por Cordova, e voltou para o usuário através de uma função de retorno.
 
 </p>
+
+
+<hr>
+
+<h1><a name="PositionError">PositionError</a></h1>
+
+<p>A <code><a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a></code> object is passed to the <code><a href="cordova_geolocation_geolocation.md.html#geolocationError">geolocationError</a></code> callback when an error occurs.</p>
+
+<h2><a name="PositionError_properties">Properties</a></h2>
+
+<ul>
+<li><p><strong>code</strong>: Um dos códigos de erro predefinidos listados abaixo..</p></li>
+<li><p><strong>message</strong>: Mensagem de erro descrevendo os detalhes do erro encontrado.</p></li>
+</ul>
+
+<h2><a name="PositionError_constants">Constants</a></h2>
+
+<ul>
+<li><code><a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a>.PERMISSION_DENIED</code></li>
+<li><code><a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a>.POSITION_UNAVAILABLE</code></li>
+<li><code><a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a>.TIMEOUT</code></li>
+</ul>
+
+<h2><a name="PositionError_description">Description</a></h2>
+
+<p>The <code><a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a></code> objeto é passado para o <code><a href="cordova_geolocation_geolocation.md.html#geolocationError">geolocationError</a></code>
+função callback quando ocorre um erro com geolocalização.
+Possui os seguintes códigos de erro:</p>
+
+<ul>
+<li><p><code><a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a>.PERMISSION_DENIED</code>: Devolvido quando os usuários não permitir que o aplicativo recupere informação sobre a posição. Isto é dependente da plataforma..</p></li>
+<li><p><code><a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a>.POSITION_UNAVAILABLE</code>: Retornado quando o dispositivo não é capaz de recuperar a posição. Em geral, isso significa que o dispositivo não está conectado a uma rede ou não pode obter uma correção por satélite.</p></li>
+<li><p><code><a href="cordova_geolocation_geolocation.md.html#PositionError">PositionError</a>.TIMEOUT</code>:  Retornado quando o dispositivo não é capaz de recuperar uma posição dentro do tempo especificado pelo timeout incluído no <code>timeout</code>
+included in <code><a href="cordova_geolocation_geolocation.md.html#geolocationOptions">geolocationOptions</a></code>.  Quando usado com
+<code><a href="cordova_geolocation_geolocation.md.html#geolocation.watchPosition">geolocation.watchPosition</a></code>, este erro pode ser passado várias vezes para o 
+to the <code><a href="cordova_geolocation_geolocation.md.html#geolocationError">geolocationError</a></code> callback every <code>timeout</code> milliseconds.</p></li>
+</ul>
+
+
+
 				</div>
 			</div>
 		</div>
