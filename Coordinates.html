@@ -42,7 +42,8 @@
 			// device APIs are available
 			//
 			function onDeviceReady() {
-				navigator.geolocation.getCurrentPosition(onSuccess, onError);
+			    var options = { timeout: 5000 };
+				navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
 			}
 
 			// Display `Position` properties from the geolocation
