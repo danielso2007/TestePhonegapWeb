@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teste</title>
+
+<link rel="stylesheet" href="css/jquery.mobile-1.4.1.min.css">
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.1.min.css">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/jqm-demos.css">
+<link rel="shortcut icon" href="icon.png">
+
+<script type="text/javascript" src="phonegap.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.1.min.js"></script>
+
+
+
+<script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+		    $.mobile.buttonMarkup.hoverDelay = true;
+		    $.mobile.touchOverflowEnabled = true;
+		    $.mobile.phonegapNavigationEnabled = true;
+		    $.mobile.pushStateEnabled = false;
+		    $.mobile.ajaxEnabled = false;
+		});
+		$(document).bind('pageinit', function () {
+
+		});
+		$(document).ready(function () {
+
+		
+			// Wait for device API libraries to load
+			//
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			var watchID = null;
+
+			// device APIs are available
+			//
+			function onDeviceReady() {
+				// Throw an error if no update is received every 30 seconds
+				var options = { timeout: 30000 };
+				watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+			}
+
+			// onSuccess Geolocation
+			//
+			function onSuccess(position) {
+				var element = document.getElementById('geolocation');
+				element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+									'Longitude: ' + position.coords.longitude     + '<br />' +
+									'<hr />'      + element.innerHTML;
+			}
+
+				// onError Callback receives a PositionError object
+				//
+				function onError(error) {
+					alert('code: '    + error.code    + '\n' +
+						  'message: ' + error.message + '\n');
+				}
+		
+		
+		});
+		
+		function loadPopup(e, msg, themeBt) {
+			var $this = $( e ),
+				theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+				msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+				textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+				textonly = !!$this.jqmData( "textonly" );
+				html = $this.jqmData( "html" ) || "";
+			$.mobile.loading( "show", {
+					text: msg,
+					textVisible: true,
+					theme: themeBt,
+					textonly: false,
+					html: html
+			});
+		}
+    </script>
+</head>
+
+<body>
+
+	<!-- Start of first page: #one -->
+	<div data-role="page" id="pageButtonsLogin" data-theme="a">
+
+		<div role="main" class="ui-content">
+			<div>
+				<div class="center" style="margin-top: 2.4em;">
+					<h1>Example</h1>
+					<p id="geolocation">Watching geolocation...</p>
+					
+					<p>
+					Relógios para alterações à posição atual do dispositivo.
+</p>
+<p>
+<b>Parâmetros</b><br/>
+
+<b>geolocationSuccess :</b> O retorno de chamada que é passado da posição atual.
+<br/>
+<b>geolocationError :</b> (Opcional) O retorno de chamada que executa se ocorrer um erro.
+<br/>
+<b>geolocationOptions :</b> (Opcional) As opções de geolocalização.
+</p>
+<p>
+<b>Devoluções</b>
+<br/>
+<b>String:</b> retorna um ID de relógio que faz referência o intervalo de posição de observação. O ID de relógio deve ser usado com geolocation.clearWatch parar de assistir a mudanças na posição.
+
+</p>
+<p>
+<b>Descrição</b><br/>
+ geolocation.watchPosition é uma função assíncrona. Ele retorna a posição atual do dispositivo, quando uma mudança de posição é detectada. Quando o dispositivo recupera um novo local, o geolocationSuccess callback executa com uma Position de objeto como parâmetro. Se houver um erro, o geolocationError de retorno é executado com um PositionError objecto como o parâmetro.
+ </p>
+				</div>
+			</div>
+		</div>
+		<!-- /content -->
+
+	</div>
+	<!-- /page one -->
+
+
+
+</body>
+</html>
+

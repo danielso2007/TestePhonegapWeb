@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teste</title>
+
+<link rel="stylesheet" href="css/jquery.mobile-1.4.1.min.css">
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.1.min.css">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/jqm-demos.css">
+<link rel="shortcut icon" href="icon.png">
+
+<script type="text/javascript" src="phonegap.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.1.min.js"></script>
+
+
+
+<script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+		    $.mobile.buttonMarkup.hoverDelay = true;
+		    $.mobile.touchOverflowEnabled = true;
+		    $.mobile.phonegapNavigationEnabled = true;
+		    $.mobile.pushStateEnabled = false;
+		    $.mobile.ajaxEnabled = false;
+		});
+		$(document).bind('pageinit', function () {
+
+		});
+		$(document).ready(function () {
+
+		
+			// wait for device API libraries to load
+			//
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			// device APIs are available
+			//
+			function onDeviceReady() {
+				navigator.geolocation.getCurrentPosition(onSuccess, onError);
+			}
+
+			// Display `Position` properties from the geolocation
+			//
+			function onSuccess(position) {
+				var div = document.getElementById('myDiv');
+
+				div.innerHTML = 'Latitude: '             + position.coords.latitude         + '<br/>' +
+								'Longitude: '            + position.coords.longitude        + '<br/>' +
+								'Altitude: '             + position.coords.altitude         + '<br/>' +
+								'Accuracy: '             + position.coords.accuracy         + '<br/>' +
+								'Altitude Accuracy: '    + position.coords.altitudeAccuracy + '<br/>' +
+								'Heading: '              + position.coords.heading          + '<br/>' +
+								'Speed: '                + position.coords.speed            + '<br/>';
+			}
+
+			// Show an alert if there is a problem getting the geolocation
+			//
+			function onError() {
+				alert('onError!');
+			}
+		
+		
+		});
+		
+		function loadPopup(e, msg, themeBt) {
+			var $this = $( e ),
+				theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+				msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+				textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+				textonly = !!$this.jqmData( "textonly" );
+				html = $this.jqmData( "html" ) || "";
+			$.mobile.loading( "show", {
+					text: msg,
+					textVisible: true,
+					theme: themeBt,
+					textonly: false,
+					html: html
+			});
+		}
+    </script>
+</head>
+
+<body>
+
+	<!-- Start of first page: #one -->
+	<div data-role="page" id="pageButtonsLogin" data-theme="a">
+
+		<div role="main" class="ui-content">
+			<div>
+				<div class="center" style="margin-top: 2.4em;">
+					<h1>Example</h1>
+					<div id="myDiv"></div>
+					
+					<br/><br/><p>
+					Um conjunto de propriedades que descrevem as coordenadas geográficas de uma posição.
+					</p>
+<p>
+<b>Propriedades</b>
+<br/>
+<b>latitude:.</b> Latitude em graus decimais (o número)
+<br/>
+<b>longitude:.</b> Longitude em graus decimais (o número)
+<br/>
+<b>altitude:.</b> Altura da posição em metros acima do elipsóide (Number)
+<br/>
+<b>precisão:.</b> nível de precisão da latitude e longitude em metros (Number)
+<br/>
+<b>altitudeAccuracy:</b> Precisão nível da altitude coordenar em metros (Number).
+<br/>
+<b>título:</b> Direcção da viagem, especificado em graus contando no sentido horário em relação ao norte verdadeiro (Number).
+<br/>
+<b>Velocidade:.</b> velocidade de solo atual do dispositivo, especificado em metros por segundo (número)
+</p>
+<p>
+<b>Descrição</b>
+<br/>
+O Coordinates objeto está ligado à Position de objeto que está disponível para as funções de retorno de chamada em pedidos para a posição atual.
+<br/>
+</p>
+<p>
+<b>Plataformas suportadas</b>
+<br/>
+Amazon Fogo OS<br/>
+Andróide<br/>
+BlackBerry 10<br/>
+iOS<br/>
+Tizen<br/>
+Windows Phone 7 e 8<br/>
+Windows 8<p/>
+				</div>
+			</div>
+		</div>
+		<!-- /content -->
+
+	</div>
+	<!-- /page one -->
+
+
+
+</body>
+</html>
+
