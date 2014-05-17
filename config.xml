@@ -18,6 +18,8 @@
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="phonegap-version" value="3.4.0" />
 	
+
+	
 	<!--
        Se você não quer que nenhuma permissão para ser adicionado ao seu aplicativo, 
 	   adicione a seguinte tag para seu config.xml, você ainda terá a permissão INTERNET 
@@ -70,6 +72,9 @@
 	
 	<!-- LocalNotification -->
 	<gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.7.4" />
+	
+	<!-- Toast -->
+	<gap:plugin name="nl.x-services.plugins.toast" version="2.0" />
 	
 	<!-- Define app icon for each platform. -->
     <icon src="icon.png" />

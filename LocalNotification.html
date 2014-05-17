@@ -54,20 +54,36 @@
 				id:      1,
 				title:   'Reminder',
 				message: 'Dont forget to buy some flowers.',
-				repeat:  'weekly',
+				//repeat:  'weekly',
+				autoCancel: true,
 				date:    _60_seconds_from_now
 			});
 				
-				window.plugin.notification.local.add({ message: 'Great app!' });
-			}
+				window.plugin.notification.local.add({ message: 'Great app!', autoCancel: true });
+				
+				window.plugin.notification.local.add({
+					id:         1,
+					message:    'I love BlackBerry!',
+					json:       JSON.stringify({ test: 123 }),
+					autoCancel: true
+				});
 
-			function notf() {
-			    alert('teste');
-			    window.plugin.notification.local.add({ message: 'Great app!' });
+				window.plugin.notification.local.onclick = function (id, state, json) {
+					console.log(id, JSON.parse(json).test);
+				}
 			}
+			
+    //id:         String,  // A unique id of the notifiction
+    //date:       Date,    // This expects a date object
+    //message:    String,  // The message that is displayed
+    //title:      String,  // The title of the message
+    //repeat:     String,  // Either 'secondly', 'minutely', 'hourly', 'daily', 'weekly', 'monthly' or 'yearly'
+    //badge:      Number,  // Apresenta o número de crachá para notificação
+    //sound:      String,  // A sound to be played
+    //json:       String,  // Data to be passed through the notification
+    //autoCancel: Boolean, // Definir esse sinalizador ea notificação é cancelada automaticamente quando o usuário clica nele
+    //ongoing:    Boolean, // Prevent clearing of notification (Android only)
 
-		
-		
 		});
     </script>
 </head>
@@ -82,10 +98,10 @@
 				<div class="center" style="margin-top: 2.4em;">
 					
 					
-					<button onclick="notf();">Local Notification</button>
+					<button onclick="window.plugin.notification.local.add({ message: 'Click no botão!', autoCancel: true });">Local Notification</button>
 					
 					
-							
+							https://github.com/katzer/cordova-plugin-local-notifications/tree/c9633123fa315c69b4cb145aa3554d2b66932121
 				</div>
 			</div>
 		</div>
