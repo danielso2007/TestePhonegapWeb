@@ -15,43 +15,85 @@
 <link rel="shortcut icon" href="icon.png">
 
 <script type="text/javascript" src="phonegap.js"></script>
-<script type="text/javascript" src="BackgroundJS.js"></script>
+<script type="text/javascript" src="js/BackgroundJS.js"></script>
 
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.mobile-1.4.1.min.js"></script>
 
 
 
+
 <script type="text/javascript">
-        $(document).bind("mobileinit", function () {
-		    $.mobile.buttonMarkup.hoverDelay = true;
-		    $.mobile.touchOverflowEnabled = true;
-		    $.mobile.phonegapNavigationEnabled = true;
-		    $.mobile.pushStateEnabled = false;
-		    $.mobile.ajaxEnabled = false;
-		});
-		$(document).bind('pageinit', function () {
+       //Global error handler!
+window.onerror = function(msg, url, line) {
+    // You can view the information in an alert to see things working
+    // like so:
+    var errStr = "Error: " + msg + "\nurl: " + url + "\nline #: " + line;
+    console.log(errStr);
+    alert(errStr);
 
-		});
-		$(document).ready(function () {
-
-		
-					var timerCount = 0;
-			window.plugins.BackgroundJS.LockBackgroundTime(function(){}, function(msg){console.log(msg);alert(msg);});
-			setInterval(function() {
-			    $('txt').html(timerCount++);
-			},1000);
-				
+    // If you return true, then error alerts (like in older versions of
+    // Internet Explorer) will be suppressed.
+    return false;
+};
 
 
-var seconds = 10;
-window.plugins.BackgroundJS.SetBackgroundSeconds(seconds, function(){ alert(seconds); }, function(msg){console.log(msg);alert(msg);});
-		
-		});
 
-function clearWatch() {
-window.plugins.BackgroundJS.UnlockBackgroundTime(function(){ alert('parou'); }, function(msg){console.log(msg);alert(msg);});
-}
+var app = {
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicity call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        app.receivedEvent('deviceready');
+
+        var timerEl = document.getElementById('timer');
+        var timerCount = 0;
+        setInterval(function(){
+            timerCount++;
+            timerEl.innerText = timerCount;
+        }, 1000);
+
+        var btnStart = document.getElementById('btnStart');
+        var btnStop = document.getElementById('btnStop');
+        var btnTemporary = document.getElementById('btnTemporary');
+        var message = document.getElementById('message');
+
+        btnStart.addEventListener('click', function(){
+            BackgroundJS.LockBackgroundTime();
+            message.innerText = 'Locked background processing indefinitely. Process away!';
+        });
+
+        btnStop.addEventListener('click', function(){
+            BackgroundJS.UnlockBackgroundTime();
+            message.innerText = 'Unlocked background processing. No more background operations :(';
+        });
+
+        btnTemporary.addEventListener('click', function(){
+            BackgroundJS.SetBackgroundSeconds(10);
+            message.innerText = 'Background processing for the next 10 seconds! Switch away!';
+        });
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        console.log('Received Event: ' + id);
+    }
+};
+
+
+
+app.initialize();
 
 
     </script>
@@ -64,10 +106,16 @@ window.plugins.BackgroundJS.UnlockBackgroundTime(function(){ alert('parou'); }, 
 
 		<div role="main" class="ui-content">
 
-				<p id="txt">Loading...</p>
-
-<br/>
-<button onclick="clearWatch();">Clear Watch</button>
+				<h1 id="timer">0</h1>
+            <div>
+                <button id="btnStart">Start BG Task</button>
+                <button id="btnStop">Stop BG Task</button>
+                <button id="btnTemporary">Get 10 BG seconds</button>
+            </div>
+            <div id="message">
+                The timer ticks every second when in the foreground.
+                Choose a background operation to see if it increments in the background.
+            </div>
 					
 
 		</div>
