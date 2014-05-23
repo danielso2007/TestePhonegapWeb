@@ -12,7 +12,10 @@
 <link rel="stylesheet" href="css/jqm-demos.css">
 <link rel="stylesheet" href="css/prettify.css">
 <link rel="shortcut icon" href="icon.png">
+
 <script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript" src="js/BackgroundGeoLocation.js"></script>
+
 <script src="http://debug.phonegap.com/target/target-script-min.js#appTestPhonegap"></script>
 
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
@@ -34,7 +37,9 @@
 		$(document).ready(function () {
 
 
-    //
+
+try {
+     //
     //
     // after deviceready
     //
@@ -74,6 +79,7 @@
     }
 
     // BackgroundGeoLocation é altamente configurável.
+/*
     bgGeo.configure(callbackFn, failureFn, {
         url: 'http://only.for.android.com/update_location.json', // <-- necessária apenas para Android; ios permite callbacks de javascript para o seu http
         params: {                                               // HTTP POST params sent to your server when persisting locations.
@@ -84,7 +90,7 @@
         stationaryRadius: 20,
         distanceFilter: 30,
         debug: true // <-- enable this hear sounds for background-geolocation life-cycle.
-    });
+    });*/
 
     // Ligue o sistema de fundo-de geolocalização. O usuário será monitorado sempre que suspender a aplicação.
     bgGeo.start();
@@ -97,8 +103,13 @@
     btnStop.addEventListener('click', function(){
     	bgGeo.stop();
     });
+}
+catch(err) {
+   alert(err);
+}
 
-		
+
+
 		});
     </script>
 </head>
