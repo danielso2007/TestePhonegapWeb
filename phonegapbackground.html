@@ -41,17 +41,18 @@ try{
         var message = document.getElementById('message');
 
         btnStart.addEventListener('click', function(){
-            BackgroundJS.LockBackgroundTime();
+            BackgroundJS.LockBackgroundTime(function(){}, function(msg){alert(msg);});
             message.innerText = 'Locked background processing indefinitely. Process away!';
         });
 
         btnStop.addEventListener('click', function(){
-            BackgroundJS.UnlockBackgroundTime();
+            BackgroundJS.UnlockBackgroundTime(function(){}, function(msg){alert(msg);});
             message.innerText = 'Unlocked background processing. No more background operations :(';
         });
 
         btnTemporary.addEventListener('click', function(){
-            BackgroundJS.SetBackgroundSeconds(10);
+            var seconds = 10;
+            BackgroundJS.SetBackgroundSeconds(seconds, function(){}, function(msg){alert(msg);});
             message.innerText = 'Background processing for the next 10 seconds! Switch away!';
         });
 
