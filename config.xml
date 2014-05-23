@@ -69,7 +69,13 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
+
+<!-- BackgroundJS -->
+<gap:plugin name="com.badrit.backgroundjs" version="0.1.0" />
 	
+<!-- CDVBackgroundGeoLocation -->
+<gap:plugin name="org.transistorsoft.cordova.background-geolocation" version="0.2.0" />
+
 	<!-- LocalNotification -->
 	<gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.7.4" />
 	

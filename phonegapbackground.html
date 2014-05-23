@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teste</title>
+
+<link rel="stylesheet" href="css/jquery.mobile-1.4.1.min.css">
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.1.min.css">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/jqm-demos.css">
+<link rel="stylesheet" href="css/prettify.css">
+
+<link rel="shortcut icon" href="icon.png">
+
+<script type="text/javascript" src="phonegap.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.1.min.js"></script>
+
+
+
+<script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+		    $.mobile.buttonMarkup.hoverDelay = true;
+		    $.mobile.touchOverflowEnabled = true;
+		    $.mobile.phonegapNavigationEnabled = true;
+		    $.mobile.pushStateEnabled = false;
+		    $.mobile.ajaxEnabled = false;
+		});
+		$(document).bind('pageinit', function () {
+
+		});
+		$(document).ready(function () {
+
+		
+					var timerCount = 0;
+			window.plugins.BackgroundJS.LockBackgroundTime(function(){}, function(msg){console.log(msg);alert(msg);});
+			setInterval(function() {
+			    $('txt').html(timerCount++);
+			},1000);
+				
+
+
+var seconds = 10;
+window.plugins.BackgroundJS.SetBackgroundSeconds(seconds, function(){ alert(seconds); }, function(msg){console.log(msg);alert(msg);});
+		
+		});
+
+function clearWatch() {
+window.plugins.BackgroundJS.UnlockBackgroundTime(function(){ alert('parou'); }, function(msg){console.log(msg);alert(msg);});
+}
+
+
+    </script>
+</head>
+
+<body>
+
+	<!-- Start of first page: #one -->
+	<div data-role="page" id="pageButtonsLogin" data-theme="a">
+
+		<div role="main" class="ui-content">
+
+				<p id="txt">Loading...</p>
+
+<br/>
+<button onclick="clearWatch();">Clear Watch</button>
+					
+
+		</div>
+		<!-- /content -->
+
+	</div>
+	<!-- /page one -->
+
+
+
+</body>
+</html>
+
