@@ -71,17 +71,17 @@ var app = {
         var message = document.getElementById('message');
 
         btnStart.addEventListener('click', function(){
-            BackgroundJS.LockBackgroundTime();
+            window.plugins.BackgroundJS.LockBackgroundTime();
             message.innerText = 'Locked background processing indefinitely. Process away!';
         });
 
         btnStop.addEventListener('click', function(){
-            BackgroundJS.UnlockBackgroundTime();
+            window.plugins.BackgroundJS.UnlockBackgroundTime();
             message.innerText = 'Unlocked background processing. No more background operations :(';
         });
 
         btnTemporary.addEventListener('click', function(){
-            BackgroundJS.SetBackgroundSeconds(10);
+            window.plugins.BackgroundJS.SetBackgroundSeconds(10);
             message.innerText = 'Background processing for the next 10 seconds! Switch away!';
         });
     },
