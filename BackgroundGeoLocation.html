@@ -11,9 +11,7 @@
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/jqm-demos.css">
 <link rel="stylesheet" href="css/prettify.css">
-
 <link rel="shortcut icon" href="icon.png">
-
 <script type="text/javascript" src="phonegap.js"></script>
 
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
@@ -34,9 +32,71 @@
 		});
 		$(document).ready(function () {
 
-		
 
-	
+    //
+    //
+    // after deviceready
+    //
+    //
+
+    // Seu aplicativo deve executar pelo menos uma chamada para a posição atual via geolocalização Cordova padrão, 
+    // a fim de solicitar ao usuário Localização permissão.
+    window.navigator.geolocation.getCurrentPosition(function(location) {
+        console.log('Location from Phonegap');
+    });
+
+    var bgGeo = window.plugins.backgroundGeoLocation;
+
+    /**
+    * Este seria o seu próprio retorno de chamada para AJAX pedidos depois de postar fundo de geolocalização ao seu servidor.
+    */
+    var yourAjaxCallback = function(response) {
+        //
+        // IMPORTANTE: Você deve executar o método #finish() aqui para informar o plugin nativo que você está acabado,
+        // eo fundo-tarefa pode ser concluída. Você deve fazer isso independentemente se o seu pedido HTTP é bem sucedido ou não.
+        // Se não o fizer, ios irá travar o seu APP para passar muito tempo em segundo plano.
+        //
+        bgGeo.finish();
+    };
+
+    /**
+    * Este callback será executado toda vez que um de geolocalização é gravado em segundo plano.
+    */
+    var callbackFn = function(location) {
+        console.log('[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude);
+        // Faça o seu pedido HTTP aqui para postar localização para o servidor.
+        yourAjaxCallback.call(this);
+    };
+
+    var failureFn = function(error) {
+        console.log('BackgroundGeoLocation error');
+    }
+
+    // BackgroundGeoLocation é altamente configurável.
+    bgGeo.configure(callbackFn, failureFn, {
+        url: 'http://only.for.android.com/update_location.json', // <-- necessária apenas para Android; ios permite callbacks de javascript para o seu http
+        params: {                                               // HTTP POST params sent to your server when persisting locations.
+            auth_token: 'user_secret_auth_token'
+            foo: 'bar'
+        },
+        desiredAccuracy: 10,
+        stationaryRadius: 20,
+        distanceFilter: 30,
+        debug: true // <-- enable this hear sounds for background-geolocation life-cycle.
+    });
+
+    // Ligue o sistema de fundo-de geolocalização. O usuário será monitorado sempre que suspender a aplicação.
+    bgGeo.start();
+
+    // Se você deseja desligar fundo-tracking, chame o método # stop.
+    // bgGeo.stop()
+
+    var btnStop = document.getElementById('btnStop');
+
+    btnStop.addEventListener('click', function(){
+    	bgGeo.stop();
+    });
+
 		
 		});
     </script>
@@ -48,9 +108,9 @@
 	<div data-role="page" id="pageButtonsLogin" data-theme="a">
 
 		<div role="main" class="ui-content">
-
-				
-
+		
+		<button id="btnStop">Stop</button>
+		
 		</div>
 		<!-- /content -->
 

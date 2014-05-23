@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     
-    <title>phonegap-backgroundjs/iOS-Sample/www/js/BackgroundJS.js at master · jocull/phonegap-backgroundjs</title>
+    <title>phonegap-background/www/BackgroundJS.js at ab89bcb9287685092504e462501d131185ecb1e9 · hazemhagrass/phonegap-background</title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
@@ -19,8 +19,8 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
     <meta property="fb:app_id" content="1401488693436528"/>
 
-      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="jocull/phonegap-backgroundjs" name="twitter:title" /><meta content="phonegap-backgroundjs - Background JavaScript on iOS with PhoneGap" name="twitter:description" /><meta content="https://avatars0.githubusercontent.com/u/246455?s=400" name="twitter:image:src" />
-<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars0.githubusercontent.com/u/246455?s=400" property="og:image" /><meta content="jocull/phonegap-backgroundjs" property="og:title" /><meta content="https://github.com/jocull/phonegap-backgroundjs" property="og:url" /><meta content="phonegap-backgroundjs - Background JavaScript on iOS with PhoneGap" property="og:description" />
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="hazemhagrass/phonegap-background" name="twitter:title" /><meta content="Contribute to phonegap-background development by creating an account on GitHub." name="twitter:description" /><meta content="https://avatars2.githubusercontent.com/u/3625423?s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars2.githubusercontent.com/u/3625423?s=400" property="og:image" /><meta content="hazemhagrass/phonegap-background" property="og:title" /><meta content="https://github.com/hazemhagrass/phonegap-background" property="og:url" /><meta content="Contribute to phonegap-background development by creating an account on GitHub." property="og:description" />
 
     <link rel="assets" href="https://assets-cdn.github.com/">
     <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
@@ -31,7 +31,7 @@
     <meta name="selected-link" value="repo_source" data-pjax-transient />
       <meta name="google-analytics" content="UA-3769691-2">
 
-    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="BB66871A:6EBF:3DF6BEE:537F8550" name="octolytics-dimension-request_id" /><meta content="1641606" name="octolytics-actor-id" /><meta content="danielso2007" name="octolytics-actor-login" /><meta content="253163dd99cfe26b86e8e6cbbba9d6ff769801ffc5f49d202df23388d1102b14" name="octolytics-actor-hash" />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="BB66871A:6EBC:996BC3:537F8DA7" name="octolytics-dimension-request_id" /><meta content="1641606" name="octolytics-actor-id" /><meta content="danielso2007" name="octolytics-actor-login" /><meta content="253163dd99cfe26b86e8e6cbbba9d6ff769801ffc5f49d202df23388d1102b14" name="octolytics-actor-hash" />
     
 
     
@@ -39,7 +39,7 @@
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico" />
 
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="7AcrKLRov47W3aNELD1xG3+e4InJPXuJwYLLpEtTL5pslQGNMxhbN0TaCzbhZ9nwNstIccejtZpxrSWnMpwHwQ==" name="csrf-token" />
+<meta content="F1WTVo5MHKcLIw0iM8zfuMXvydARVgq++LFV0Ehzxiw6RY/izxUZpPe4VrlURhU+G8KGhAyRmKcGfeZbCxVOsA==" name="csrf-token" />
 
     <link href="https://assets-cdn.github.com/assets/github-a5b1ed2a59619f83449f49f1af15d646a0a9d0fd.css" media="all" rel="stylesheet" type="text/css" />
     <link href="https://assets-cdn.github.com/assets/github2-bd182415a0e932f312acd620bb460b01270e93d9.css" media="all" rel="stylesheet" type="text/css" />
@@ -49,10 +49,10 @@
     <meta http-equiv="x-pjax-version" content="296d4a7783891e3920ce292d67085538">
 
       
-  <meta name="description" content="phonegap-backgroundjs - Background JavaScript on iOS with PhoneGap" />
+  <meta name="description" content="Contribute to phonegap-background development by creating an account on GitHub." />
 
-  <meta content="246455" name="octolytics-dimension-user_id" /><meta content="jocull" name="octolytics-dimension-user_login" /><meta content="11227303" name="octolytics-dimension-repository_id" /><meta content="jocull/phonegap-backgroundjs" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="11227303" name="octolytics-dimension-repository_network_root_id" /><meta content="jocull/phonegap-backgroundjs" name="octolytics-dimension-repository_network_root_nwo" />
-  <link href="https://github.com/jocull/phonegap-backgroundjs/commits/master.atom" rel="alternate" title="Recent Commits to phonegap-backgroundjs:master" type="application/atom+xml" />
+  <meta content="3625423" name="octolytics-dimension-user_id" /><meta content="hazemhagrass" name="octolytics-dimension-user_login" /><meta content="12924868" name="octolytics-dimension-repository_id" /><meta content="hazemhagrass/phonegap-background" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="12924868" name="octolytics-dimension-repository_network_root_id" /><meta content="hazemhagrass/phonegap-background" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/hazemhagrass/phonegap-background/commits/ab89bcb9287685092504e462501d131185ecb1e9.atom" rel="alternate" title="Recent Commits to phonegap-background:ab89bcb9287685092504e462501d131185ecb1e9" type="application/atom+xml" />
 
   </head>
 
@@ -86,14 +86,14 @@
   <input type="text" data-hotkey="s, /" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
     
     data-username="danielso2007"
-      data-repo="jocull/phonegap-backgroundjs"
-      data-branch="master"
-      data-sha="21f0f3e629e7bdfd62b382b7717dc0ef09cccf50"
+      data-repo="hazemhagrass/phonegap-background"
+      data-branch="ab89bcb9287685092504e462501d131185ecb1e9"
+      data-sha="32b091210f5b57cd682b4b220bcc942979753fe0"
   >
   <div class="display hidden"></div>
 </div>
 
-    <input type="hidden" name="nwo" value="jocull/phonegap-backgroundjs" />
+    <input type="hidden" name="nwo" value="hazemhagrass/phonegap-background" />
 
     <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
       <span class="minibutton select-menu-button js-menu-target" role="button" aria-haspopup="true">
@@ -185,10 +185,10 @@
 
 
     <li class="section-title">
-      <span title="jocull/phonegap-backgroundjs">This repository</span>
+      <span title="hazemhagrass/phonegap-background">This repository</span>
     </li>
       <li>
-        <a href="/jocull/phonegap-backgroundjs/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
+        <a href="/hazemhagrass/phonegap-background/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
       </li>
 </ul>
 
@@ -217,11 +217,11 @@
 <ul class="pagehead-actions">
 
     <li class="subscription">
-      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="yJMwl1p1GlGPHKAZ1U0lPc7NEJ3kHuqClphvKRBhQdDiy+YjFcASZxa7gPYWeBrsmJqcuOUT1pOoe8swS2hZMQ==" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="11227303" />
+      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="cyS9Db/KysKfl9T9keMnGzem9Mz31K7+nTJXUUJPUqP3PS+mChbmce/UhaoHDEdA68R6nAkHy94fB4CH+hIlag==" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="12924868" />
 
     <div class="select-menu js-menu-container js-select-menu">
-      <a class="social-count js-social-count" href="/jocull/phonegap-backgroundjs/watchers">
-        6
+      <a class="social-count js-social-count" href="/hazemhagrass/phonegap-background/watchers">
+        7
       </a>
       <span class="minibutton select-menu-button with-count js-menu-target" role="button" tabindex="0" aria-haspopup="true">
         <span class="js-select-button">
@@ -292,24 +292,24 @@
 
   <div class="js-toggler-container js-social-container starring-container ">
 
-    <form accept-charset="UTF-8" action="/jocull/phonegap-backgroundjs/unstar" class="js-toggler-form starred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="TPo2jyQY5ZZr7ZGyu/YO9VTQu9uHvA5q2Kaq8DWssPFR5VTZcXsMjMEax7I8vZ8ZinkTB3pRgiTbytBRXhbtHg==" /></div>
+    <form accept-charset="UTF-8" action="/hazemhagrass/phonegap-background/unstar" class="js-toggler-form starred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="s2oy4/TsqpiP9WqjGQbAeLMbGyAs1gYl7BQsb8l8OxDVlIcsmTS1Vp01lmM7GbhT1CBtJLGXPhFIkaBrNDfBTw==" /></div>
       <button
         class="minibutton with-count js-toggler-target star-button"
-        aria-label="Unstar this repository" title="Unstar jocull/phonegap-backgroundjs">
+        aria-label="Unstar this repository" title="Unstar hazemhagrass/phonegap-background">
         <span class="octicon octicon-star"></span><span class="text">Unstar</span>
       </button>
-        <a class="social-count js-social-count" href="/jocull/phonegap-backgroundjs/stargazers">
-          20
+        <a class="social-count js-social-count" href="/hazemhagrass/phonegap-background/stargazers">
+          13
         </a>
 </form>
-    <form accept-charset="UTF-8" action="/jocull/phonegap-backgroundjs/star" class="js-toggler-form unstarred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="Gon8wUBmv8ZPFgWsSlNe0ayHOZiYnTflWTwpDjavwsDlqK/Opg1U9pwPiyncTvV7xWgtRPVKYMyp4/b3GPIrwQ==" /></div>
+    <form accept-charset="UTF-8" action="/hazemhagrass/phonegap-background/star" class="js-toggler-form unstarred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="5PpHlaRzmwIzTZwCeDtepdTSU7ZkO9bfSiRc9oi/Oe0UitKCdFYttw+xmwPik1WpjzfmhhTA4U2KQg53wxcPMw==" /></div>
       <button
         class="minibutton with-count js-toggler-target star-button"
-        aria-label="Star this repository" title="Star jocull/phonegap-backgroundjs">
+        aria-label="Star this repository" title="Star hazemhagrass/phonegap-background">
         <span class="octicon octicon-star"></span><span class="text">Star</span>
       </button>
-        <a class="social-count js-social-count" href="/jocull/phonegap-backgroundjs/stargazers">
-          20
+        <a class="social-count js-social-count" href="/hazemhagrass/phonegap-background/stargazers">
+          13
         </a>
 </form>  </div>
 
@@ -317,10 +317,10 @@
 
 
         <li>
-          <a href="/jocull/phonegap-backgroundjs/fork" class="minibutton with-count js-toggler-target fork-button lighter tooltipped-n" title="Fork your own copy of jocull/phonegap-backgroundjs to your account" aria-label="Fork your own copy of jocull/phonegap-backgroundjs to your account" rel="nofollow" data-method="post">
+          <a href="/hazemhagrass/phonegap-background/fork" class="minibutton with-count js-toggler-target fork-button lighter tooltipped-n" title="Fork your own copy of hazemhagrass/phonegap-background to your account" aria-label="Fork your own copy of hazemhagrass/phonegap-background to your account" rel="nofollow" data-method="post">
             <span class="octicon octicon-repo-forked"></span><span class="text">Fork</span>
           </a>
-          <a href="/jocull/phonegap-backgroundjs/network" class="social-count">3</a>
+          <a href="/hazemhagrass/phonegap-background/network" class="social-count">3</a>
         </li>
 
 
@@ -329,9 +329,9 @@
         <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
           <span class="repo-label"><span>public</span></span>
           <span class="mega-octicon octicon-repo"></span>
-          <span class="author"><a href="/jocull" class="url fn" itemprop="url" rel="author"><span itemprop="title">jocull</span></a></span><!--
+          <span class="author"><a href="/hazemhagrass" class="url fn" itemprop="url" rel="author"><span itemprop="title">hazemhagrass</span></a></span><!--
        --><span class="path-divider">/</span><!--
-       --><strong><a href="/jocull/phonegap-backgroundjs" class="js-current-repository js-repo-home-link">phonegap-backgroundjs</a></strong>
+       --><strong><a href="/hazemhagrass/phonegap-background" class="js-current-repository js-repo-home-link">phonegap-background</a></strong>
 
           <span class="page-context-loader">
             <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
@@ -350,20 +350,20 @@
   <div class="sunken-menu-contents">
     <ul class="sunken-menu-group">
       <li class="tooltipped tooltipped-w" aria-label="Code">
-        <a href="/jocull/phonegap-backgroundjs" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /jocull/phonegap-backgroundjs">
+        <a href="/hazemhagrass/phonegap-background" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /hazemhagrass/phonegap-background">
           <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
           <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
 </a>      </li>
 
         <li class="tooltipped tooltipped-w" aria-label="Issues">
-          <a href="/jocull/phonegap-backgroundjs/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g i" data-selected-links="repo_issues /jocull/phonegap-backgroundjs/issues">
+          <a href="/hazemhagrass/phonegap-background/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g i" data-selected-links="repo_issues /hazemhagrass/phonegap-background/issues">
             <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
-            <span class='counter'>3</span>
+            <span class='counter'>1</span>
             <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
 </a>        </li>
 
       <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
-        <a href="/jocull/phonegap-backgroundjs/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g p" data-selected-links="repo_pulls /jocull/phonegap-backgroundjs/pulls">
+        <a href="/hazemhagrass/phonegap-background/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g p" data-selected-links="repo_pulls /hazemhagrass/phonegap-background/pulls">
             <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
             <span class='counter'>0</span>
             <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
@@ -371,7 +371,7 @@
 
 
         <li class="tooltipped tooltipped-w" aria-label="Wiki">
-          <a href="/jocull/phonegap-backgroundjs/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g w" data-selected-links="repo_wiki /jocull/phonegap-backgroundjs/wiki">
+          <a href="/hazemhagrass/phonegap-background/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g w" data-selected-links="repo_wiki /hazemhagrass/phonegap-background/wiki">
             <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
             <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
 </a>        </li>
@@ -380,19 +380,19 @@
     <ul class="sunken-menu-group">
 
       <li class="tooltipped tooltipped-w" aria-label="Pulse">
-        <a href="/jocull/phonegap-backgroundjs/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /jocull/phonegap-backgroundjs/pulse">
+        <a href="/hazemhagrass/phonegap-background/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /hazemhagrass/phonegap-background/pulse">
           <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
           <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
 </a>      </li>
 
       <li class="tooltipped tooltipped-w" aria-label="Graphs">
-        <a href="/jocull/phonegap-backgroundjs/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /jocull/phonegap-backgroundjs/graphs">
+        <a href="/hazemhagrass/phonegap-background/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /hazemhagrass/phonegap-background/graphs">
           <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
           <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
 </a>      </li>
 
       <li class="tooltipped tooltipped-w" aria-label="Network">
-        <a href="/jocull/phonegap-backgroundjs/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /jocull/phonegap-backgroundjs/network">
+        <a href="/hazemhagrass/phonegap-background/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /hazemhagrass/phonegap-background/network">
           <span class="octicon octicon-repo-forked"></span> <span class="full-word">Network</span>
           <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
 </a>      </li>
@@ -413,9 +413,9 @@
   <h3><strong>HTTPS</strong> clone URL</h3>
   <div class="clone-url-box">
     <input type="text" class="clone js-url-field"
-           value="https://github.com/jocull/phonegap-backgroundjs.git" readonly="readonly">
+           value="https://github.com/hazemhagrass/phonegap-background.git" readonly="readonly">
     <span class="url-box-clippy">
-    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/jocull/phonegap-backgroundjs.git" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/hazemhagrass/phonegap-background.git" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
     </span>
   </div>
 </div>
@@ -428,9 +428,9 @@
   <h3><strong>SSH</strong> clone URL</h3>
   <div class="clone-url-box">
     <input type="text" class="clone js-url-field"
-           value="git@github.com:jocull/phonegap-backgroundjs.git" readonly="readonly">
+           value="git@github.com:hazemhagrass/phonegap-background.git" readonly="readonly">
     <span class="url-box-clippy">
-    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="git@github.com:jocull/phonegap-backgroundjs.git" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="git@github.com:hazemhagrass/phonegap-background.git" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
     </span>
   </div>
 </div>
@@ -443,9 +443,9 @@
   <h3><strong>Subversion</strong> checkout URL</h3>
   <div class="clone-url-box">
     <input type="text" class="clone js-url-field"
-           value="https://github.com/jocull/phonegap-backgroundjs" readonly="readonly">
+           value="https://github.com/hazemhagrass/phonegap-background" readonly="readonly">
     <span class="url-box-clippy">
-    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/jocull/phonegap-backgroundjs" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/hazemhagrass/phonegap-background" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
     </span>
   </div>
 </div>
@@ -464,10 +464,10 @@
 
 
 
-                <a href="/jocull/phonegap-backgroundjs/archive/master.zip"
+                <a href="/hazemhagrass/phonegap-background/archive/ab89bcb9287685092504e462501d131185ecb1e9.zip"
                    class="minibutton sidebar-button"
-                   aria-label="Download jocull/phonegap-backgroundjs as a zip file"
-                   title="Download jocull/phonegap-backgroundjs as a zip file"
+                   aria-label="Download hazemhagrass/phonegap-background as a zip file"
+                   title="Download hazemhagrass/phonegap-background as a zip file"
                    rel="nofollow">
                   <span class="octicon octicon-cloud-download"></span>
                   Download ZIP
@@ -479,13 +479,13 @@
           
 
 
-<a href="/jocull/phonegap-backgroundjs/blob/898b0be3a504b9eb14bf5fc34b48ebaeef7723e7/iOS-Sample/www/js/BackgroundJS.js" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+<a href="/hazemhagrass/phonegap-background/blob/ab89bcb9287685092504e462501d131185ecb1e9/www/BackgroundJS.js" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
 
-<!-- blob contrib key: blob_contributors:v21:06b7aa14615c3458ed5c7708f36eace9 -->
+<!-- blob contrib key: blob_contributors:v21:0e1e171c84a1878df08652b8db2b16b4 -->
 
 <p title="This is a placeholder element" class="js-history-link-replace hidden"></p>
 
-<a href="/jocull/phonegap-backgroundjs/find/master" data-pjax data-hotkey="t" class="js-show-file-finder" style="display:none">Show File Finder</a>
+<a href="/hazemhagrass/phonegap-background/find/ab89bcb9287685092504e462501d131185ecb1e9" data-pjax data-hotkey="t" class="js-show-file-finder" style="display:none">Show File Finder</a>
 
 <div class="file-navigation">
   
@@ -493,11 +493,11 @@
 <div class="select-menu js-menu-container js-select-menu" >
   <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
     data-master-branch="master"
-    data-ref="master"
+    data-ref=""
     role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
     <span class="octicon octicon-git-branch"></span>
-    <i>branch:</i>
-    <span class="js-select-button">master</span>
+    <i>tree:</i>
+    <span class="js-select-button">ab89bcb928</span>
   </span>
 
   <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
@@ -529,9 +529,9 @@
         <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
 
 
-            <div class="select-menu-item js-navigation-item selected">
+            <div class="select-menu-item js-navigation-item ">
               <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jocull/phonegap-backgroundjs/blob/master/iOS-Sample/www/js/BackgroundJS.js"
+              <a href="/hazemhagrass/phonegap-background/blob/master/www/BackgroundJS.js"
                  data-name="master"
                  data-skip-pjax="true"
                  rel="nofollow"
@@ -557,17 +557,38 @@
 </div> <!-- /.select-menu -->
 
   <div class="breadcrumb">
-    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/jocull/phonegap-backgroundjs" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">phonegap-backgroundjs</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/jocull/phonegap-backgroundjs/tree/master/iOS-Sample" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">iOS-Sample</span></a></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/jocull/phonegap-backgroundjs/tree/master/iOS-Sample/www" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">www</span></a></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/jocull/phonegap-backgroundjs/tree/master/iOS-Sample/www/js" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">js</span></a></span><span class="separator"> / </span><strong class="final-path">BackgroundJS.js</strong> <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="iOS-Sample/www/js/BackgroundJS.js" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/hazemhagrass/phonegap-background/tree/ab89bcb9287685092504e462501d131185ecb1e9" data-branch="ab89bcb9287685092504e462501d131185ecb1e9" data-direction="back" data-pjax="true" itemscope="url" rel="nofollow"><span itemprop="title">phonegap-background</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/hazemhagrass/phonegap-background/tree/ab89bcb9287685092504e462501d131185ecb1e9/www" data-branch="ab89bcb9287685092504e462501d131185ecb1e9" data-direction="back" data-pjax="true" itemscope="url" rel="nofollow"><span itemprop="title">www</span></a></span><span class="separator"> / </span><strong class="final-path">BackgroundJS.js</strong> <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="www/BackgroundJS.js" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
   </div>
 </div>
 
 
-  <div class="commit commit-loader file-history-tease js-deferred-content" data-url="/jocull/phonegap-backgroundjs/contributors/master/iOS-Sample/www/js/BackgroundJS.js">
-    Fetching contributors…
+  <div class="commit file-history-tease">
+      <img alt="mohamed-salah" class="main-avatar js-avatar" data-user="4408501" height="24" src="https://avatars0.githubusercontent.com/u/4408501?s=140" width="24" />
+      <span class="author"><a href="/mohamed-salah" rel="contributor">mohamed-salah</a></span>
+      <time datetime="2014-01-28T15:05:42+02:00" is="relative-time" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-01-28 15:05:42 +0200">January 28, 2014</time>
+      <div class="commit-title">
+          <a href="/hazemhagrass/phonegap-background/commit/f63256557e55bcb64b62abb17347b98b3072749b" class="message" data-pjax="true" title="add dependency plugin and check for iOS platform only">add dependency plugin and check for iOS platform only</a>
+      </div>
 
     <div class="participation">
-      <p class="loader-loading"><img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" /></p>
-      <p class="loader-error">Cannot retrieve contributors at this time</p>
+      <p class="quickstat"><a href="#blob_contributors_box" rel="facebox"><strong>2</strong>  contributors</a></p>
+          <a class="avatar tooltipped tooltipped-s" aria-label="hazemhagrass" href="/hazemhagrass/phonegap-background/commits/ab89bcb9287685092504e462501d131185ecb1e9/www/BackgroundJS.js?author=hazemhagrass"><img alt="Hazem Hagrass" class=" js-avatar" data-user="3625423" height="20" src="https://avatars1.githubusercontent.com/u/3625423?s=140" width="20" /></a>
+    <a class="avatar tooltipped tooltipped-s" aria-label="mohamed-salah" href="/hazemhagrass/phonegap-background/commits/ab89bcb9287685092504e462501d131185ecb1e9/www/BackgroundJS.js?author=mohamed-salah"><img alt="mohamed-salah" class=" js-avatar" data-user="4408501" height="20" src="https://avatars0.githubusercontent.com/u/4408501?s=140" width="20" /></a>
+
+
+    </div>
+    <div id="blob_contributors_box" style="display:none">
+      <h2 class="facebox-header">Users who have contributed to this file</h2>
+      <ul class="facebox-user-list">
+          <li class="facebox-user-list-item">
+            <img alt="Hazem Hagrass" class=" js-avatar" data-user="3625423" height="24" src="https://avatars1.githubusercontent.com/u/3625423?s=140" width="24" />
+            <a href="/hazemhagrass">hazemhagrass</a>
+          </li>
+          <li class="facebox-user-list-item">
+            <img alt="mohamed-salah" class=" js-avatar" data-user="4408501" height="24" src="https://avatars0.githubusercontent.com/u/4408501?s=140" width="24" />
+            <a href="/mohamed-salah">mohamed-salah</a>
+          </li>
+      </ul>
     </div>
   </div>
 
@@ -576,28 +597,22 @@
     <div class="meta clearfix">
       <div class="info file-name">
         <span class="icon"><b class="octicon octicon-file-text"></b></span>
-        <span class="mode" title="File Mode">file</span>
+        <span class="mode" title="File Mode">executable file</span>
         <span class="meta-divider"></span>
-          <span>28 lines (21 sloc)</span>
+          <span>34 lines (26 sloc)</span>
           <span class="meta-divider"></span>
-        <span>0.864 kb</span>
+        <span>1.149 kb</span>
       </div>
       <div class="actions">
         <div class="button-group">
-                <a class="minibutton tooltipped tooltipped-n js-update-url-with-hash"
-                   aria-label="Clicking this button will automatically fork this project so you can edit the file"
-                   href="/jocull/phonegap-backgroundjs/edit/master/iOS-Sample/www/js/BackgroundJS.js"
-                   data-method="post" rel="nofollow">Edit</a>
-          <a href="/jocull/phonegap-backgroundjs/raw/master/iOS-Sample/www/js/BackgroundJS.js" class="button minibutton " id="raw-url">Raw</a>
-            <a href="/jocull/phonegap-backgroundjs/blame/master/iOS-Sample/www/js/BackgroundJS.js" class="button minibutton js-update-url-with-hash">Blame</a>
-          <a href="/jocull/phonegap-backgroundjs/commits/master/iOS-Sample/www/js/BackgroundJS.js" class="button minibutton " rel="nofollow">History</a>
+              <a class="minibutton disabled tooltipped tooltipped-w" href="#"
+                 aria-label="You must be on a branch to make or propose changes to this file">Edit</a>
+          <a href="/hazemhagrass/phonegap-background/raw/ab89bcb9287685092504e462501d131185ecb1e9/www/BackgroundJS.js" class="button minibutton " id="raw-url">Raw</a>
+            <a href="/hazemhagrass/phonegap-background/blame/ab89bcb9287685092504e462501d131185ecb1e9/www/BackgroundJS.js" class="button minibutton js-update-url-with-hash">Blame</a>
+          <a href="/hazemhagrass/phonegap-background/commits/ab89bcb9287685092504e462501d131185ecb1e9/www/BackgroundJS.js" class="button minibutton " rel="nofollow">History</a>
         </div><!-- /.button-group -->
-
-            <a class="minibutton danger empty-icon tooltipped tooltipped-s"
-               href="/jocull/phonegap-backgroundjs/delete/master/iOS-Sample/www/js/BackgroundJS.js"
-               aria-label="Fork this project and delete file"
-               data-method="post" data-test-id="delete-blob-file" rel="nofollow">
-
+          <a class="minibutton danger disabled empty-icon tooltipped tooltipped-w" href="#"
+             aria-label="You must be on a branch to make or propose changes to this file">
           Delete
         </a>
       </div><!-- /.actions -->
@@ -634,9 +649,15 @@
 <span id="L26" rel="#L26">26</span>
 <span id="L27" rel="#L27">27</span>
 <span id="L28" rel="#L28">28</span>
+<span id="L29" rel="#L29">29</span>
+<span id="L30" rel="#L30">30</span>
+<span id="L31" rel="#L31">31</span>
+<span id="L32" rel="#L32">32</span>
+<span id="L33" rel="#L33">33</span>
+<span id="L34" rel="#L34">34</span>
 
             </td>
-            <td class="blob-line-code"><div class="code-body highlight"><pre><div class='line' id='LC1'><br/></div><div class='line' id='LC2'><span class="kd">var</span> <span class="nx">BackgroundJS</span> <span class="o">=</span> <span class="p">{</span></div><div class='line' id='LC3'><br/></div><div class='line' id='LC4'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">PluginName</span><span class="o">:</span> <span class="s2">&quot;BackgroundJS&quot;</span><span class="p">,</span></div><div class='line' id='LC5'><br/></div><div class='line' id='LC6'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">PInvoke</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">){</span></div><div class='line' id='LC7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span><span class="p">(</span><span class="nx">data</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">data</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">){</span> <span class="c1">// `false` and `0` are valid values!</span></div><div class='line' id='LC8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">data</span> <span class="o">=</span> <span class="p">[];</span></div><div class='line' id='LC9'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC10'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">data</span><span class="p">)){</span></div><div class='line' id='LC11'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">data</span> <span class="o">=</span> <span class="p">[</span><span class="nx">data</span><span class="p">];</span></div><div class='line' id='LC12'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC13'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">cordova</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">PluginName</span><span class="p">,</span> <span class="nx">method</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span></div><div class='line' id='LC14'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">},</span></div><div class='line' id='LC15'><br/></div><div class='line' id='LC16'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">SetBackgroundSeconds</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">seconds</span><span class="p">,</span> <span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">){</span></div><div class='line' id='LC17'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">this</span><span class="p">.</span><span class="nx">PInvoke</span><span class="p">(</span><span class="s2">&quot;setBackgroundSeconds&quot;</span><span class="p">,</span> <span class="nx">seconds</span><span class="p">,</span> <span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">);</span></div><div class='line' id='LC18'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">},</span></div><div class='line' id='LC19'><br/></div><div class='line' id='LC20'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">LockBackgroundTime</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">){</span></div><div class='line' id='LC21'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">this</span><span class="p">.</span><span class="nx">PInvoke</span><span class="p">(</span><span class="s2">&quot;lockBackgroundTime&quot;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">);</span></div><div class='line' id='LC22'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">},</span></div><div class='line' id='LC23'><br/></div><div class='line' id='LC24'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">UnlockBackgroundTime</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">){</span></div><div class='line' id='LC25'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">this</span><span class="p">.</span><span class="nx">PInvoke</span><span class="p">(</span><span class="s2">&quot;unlockBackgroundTime&quot;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">);</span></div><div class='line' id='LC26'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class='line' id='LC27'>&nbsp;&nbsp;&nbsp;&nbsp;</div><div class='line' id='LC28'><span class="p">}</span></div></pre></div></td>
+            <td class="blob-line-code"><div class="code-body highlight"><pre><div class='line' id='LC1'>&nbsp;<span class="kd">var</span> <span class="nx">BackgroundJS</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){};</span></div><div class='line' id='LC2'><br/></div><div class='line' id='LC3'>&nbsp;<span class="nx">BackgroundJS</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">PInvoke</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">){</span></div><div class='line' id='LC4'>&nbsp;&nbsp;&nbsp;<span class="k">if</span><span class="p">(</span><span class="nx">data</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">data</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">)</span> </div><div class='line' id='LC5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">data</span> <span class="o">=</span> <span class="p">[];</span></div><div class='line' id='LC6'>&nbsp;&nbsp;&nbsp;<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span></div><div class='line' id='LC7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">data</span> <span class="o">=</span> <span class="p">[</span><span class="nx">data</span><span class="p">];</span></div><div class='line' id='LC8'><br/></div><div class='line' id='LC9'>&nbsp;&nbsp;<span class="k">if</span> <span class="p">(</span><span class="nx">device</span><span class="p">.</span><span class="nx">platform</span> <span class="o">==</span> <span class="s2">&quot;iOS&quot;</span><span class="p">)</span></div><div class='line' id='LC10'>&nbsp;&nbsp;&nbsp;<span class="nx">cordova</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">,</span> <span class="s1">&#39;BackgroundJS&#39;</span><span class="p">,</span> <span class="nx">method</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span></div><div class='line' id='LC11'><span class="p">};</span></div><div class='line' id='LC12'><br/></div><div class='line' id='LC13'><span class="nx">BackgroundJS</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">SetBackgroundSeconds</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">seconds</span><span class="p">,</span> <span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">){</span></div><div class='line' id='LC14'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nb">window</span><span class="p">.</span><span class="nx">plugins</span><span class="p">.</span><span class="nx">BackgroundJS</span><span class="p">.</span><span class="nx">PInvoke</span><span class="p">(</span><span class="s2">&quot;setBackgroundSeconds&quot;</span><span class="p">,</span> <span class="nx">seconds</span><span class="p">,</span> <span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">);</span></div><div class='line' id='LC15'><span class="p">};</span></div><div class='line' id='LC16'><br/></div><div class='line' id='LC17'><span class="nx">BackgroundJS</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">LockBackgroundTime</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">){</span></div><div class='line' id='LC18'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nb">window</span><span class="p">.</span><span class="nx">plugins</span><span class="p">.</span><span class="nx">BackgroundJS</span><span class="p">.</span><span class="nx">PInvoke</span><span class="p">(</span><span class="s2">&quot;lockBackgroundTime&quot;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">);</span></div><div class='line' id='LC19'><span class="p">};</span></div><div class='line' id='LC20'><br/></div><div class='line' id='LC21'><span class="nx">BackgroundJS</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">UnlockBackgroundTime</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">){</span></div><div class='line' id='LC22'>&nbsp;&nbsp;&nbsp;<span class="nb">window</span><span class="p">.</span><span class="nx">plugins</span><span class="p">.</span><span class="nx">BackgroundJS</span><span class="p">.</span><span class="nx">PInvoke</span><span class="p">(</span><span class="s2">&quot;unlockBackgroundTime&quot;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">callbackOK</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">);</span></div><div class='line' id='LC23'><span class="p">};</span></div><div class='line' id='LC24'><br/></div><div class='line' id='LC25'><span class="nx">cordova</span><span class="p">.</span><span class="nx">addConstructor</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span></div><div class='line' id='LC26'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;constractor&#39;</span><span class="p">);</span></div><div class='line' id='LC27'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">window</span><span class="p">.</span><span class="nx">Cordova</span><span class="p">)</span> <span class="p">{</span></div><div class='line' id='LC28'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nb">window</span><span class="p">.</span><span class="nx">Cordova</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">;</span></div><div class='line' id='LC29'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">};</span></div><div class='line' id='LC30'><br/></div><div class='line' id='LC31'><br/></div><div class='line' id='LC32'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">window</span><span class="p">.</span><span class="nx">plugins</span><span class="p">)</span> <span class="nb">window</span><span class="p">.</span><span class="nx">plugins</span> <span class="o">=</span> <span class="p">{};</span></div><div class='line' id='LC33'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nb">window</span><span class="p">.</span><span class="nx">plugins</span><span class="p">.</span><span class="nx">BackgroundJS</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BackgroundJS</span><span class="p">();</span></div><div class='line' id='LC34'><span class="p">});</span></div></pre></div></td>
           </tr>
         </table>
   </div>
@@ -679,7 +700,7 @@
     </a>
 
     <ul class="site-footer-links">
-      <li>&copy; 2014 <span title="0.06370s from github-fe116-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+      <li>&copy; 2014 <span title="0.04963s from github-fe131-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
         <li><a href="/site/terms">Terms</a></li>
         <li><a href="/site/privacy">Privacy</a></li>
         <li><a href="/security">Security</a></li>
