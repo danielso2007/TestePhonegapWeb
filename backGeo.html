@@ -36,11 +36,12 @@
 		});
 		$(document).ready(function () {
 		    var bgGeo = null;
-		
-            function parar() {
-			    alert('Para!');
+
+			
+			$("#pararBt").click(function() {
+				 alert('Para!');
 				bgGeo.stop();
-			};
+			});
 		
 			var app = {
 					// Application Constructor
@@ -153,7 +154,7 @@
 				<p id="result">...</p>
 				<br/>
 				<br/>
-				<button onclick="parar();">Parar</button>
+				<button id="pararBt">Parar</button>
             </div>
 		</div>
 		<!-- /content -->
