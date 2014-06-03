@@ -77,14 +77,12 @@
 						receivedElement.setAttribute('style', 'display:block;');
 
 						console.log('Received Event: ' + id);
-						alert('Received Event: ' + id);
 					},
 					configureBackgroundGeoLocation: function() {
-						// Your app must execute AT LEAST ONE call for the current position via standard Cordova geolocation,
-						//  in order to prompt the user for Location permission.
+						// Seu aplicativo deve executar pelo menos uma chamada para a posição atual via geolocalização Cordova padrão,
+						// a fim de solicitar ao usuário Localização permissão.
 						window.navigator.geolocation.getCurrentPosition(function(location) {
 							console.log('Location from Phonegap');
-							alert('Location from Phonegap');
 						});
 
 						var bgGeo = window.plugins.backgroundGeoLocation;
