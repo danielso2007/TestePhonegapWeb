@@ -1,3 +1,17 @@
+//Global error handler!
+window.onerror = function(msg, url, line) {
+    // You can view the information in an alert to see things working
+    // like so:
+    var errStr = "Error: " + msg + "\nurl: " + url + "\nline #: " + line;
+    console.log(errStr);
+    alert(errStr);
+
+    // If you return true, then error alerts (like in older versions of
+    // Internet Explorer) will be suppressed.
+    return false;
+};
+
+
 (function($, undefined) {
 	// special click handling to make widget work remove after nav changes in
 	// 1.4
