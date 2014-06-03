@@ -45,99 +45,96 @@
 			};
 		
 			var app = {
-				// Construtor Aplicação
-				initialize: function() {
-					this.bindEvents();
-				},
-				// Bind Event Listeners
-				//
-				// Vincular eventos que são necessários na inicialização. Eventos comuns são:
-				// 'load', 'deviceready', 'offline', and 'online'.
-				bindEvents: function() {
-					document.addEventListener('deviceready', this.onDeviceReady, false);
-				},
-				// deviceready Event Handler
-				//
-				// The scope of 'this' is the event. In order to call the 'receivedEvent' function, we must explicity call 'app.receivedEvent(...);'
-				// O escopo de "isto" é o evento. Para chamar a função 'receivedEvent', devemos explicitamente chamar 'app.receivedEvent (...);'
-				onDeviceReady: function() {
-					app.receivedEvent('deviceready');
+					// Application Constructor
+					initialize: function() {
+						this.bindEvents();
+					},
+					// Bind Event Listeners
+					//
+					// Bind any events that are required on startup. Common events are:
+					// 'load', 'deviceready', 'offline', and 'online'.
+					bindEvents: function() {
+						document.addEventListener('deviceready', this.onDeviceReady, false);
+					},
+					// deviceready Event Handler
+					//
+					// The scope of 'this' is the event. In order to call the 'receivedEvent'
+					// function, we must explicity call 'app.receivedEvent(...);'
+					onDeviceReady: function() {
+						app.receivedEvent('deviceready');
 
-					if (window.plugins.backgroundGeoLocation) {
-						app.configureBackgroundGeoLocation();
+						if (window.plugins.backgroundGeoLocation) {
+							app.configureBackgroundGeoLocation();
+						}
+
+					},
+					// Update DOM on a Received Event
+					receivedEvent: function(id) {
+						var parentElement = document.getElementById(id);
+						var listeningElement = parentElement.querySelector('.listening');
+						var receivedElement = parentElement.querySelector('.received');
+
+						listeningElement.setAttribute('style', 'display:none;');
+						receivedElement.setAttribute('style', 'display:block;');
+
+						console.log('Received Event: ' + id);
+					},
+					configureBackgroundGeoLocation: function() {
+						// Your app must execute AT LEAST ONE call for the current position via standard Cordova geolocation,
+						//  in order to prompt the user for Location permission.
+						window.navigator.geolocation.getCurrentPosition(function(location) {
+							console.log('Location from Phonegap');
+						});
+
+						var bgGeo = window.plugins.backgroundGeoLocation;
+
+						/**
+						* This would be your own callback for Ajax-requests after POSTing background geolocation to your server.
+						*/
+						var yourAjaxCallback = function(response) {
+							////
+							// IMPORTANT:  You must execute the #finish method here to inform the native plugin that you're finished,
+							//  and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
+							// IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
+							//
+							//
+							bgGeo.finish();
+						};
+
+						/**
+						* This callback will be executed every time a geolocation is recorded in the background.
+						*/
+						var callbackFn = function(location) {
+							console.log('[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude);
+							// Do your HTTP request here to POST location to your server.
+							//
+							//
+							yourAjaxCallback.call(this);
+						};
+
+						var failureFn = function(error) {
+							console.log('BackgroundGeoLocation error');
+						}
+						
+						// BackgroundGeoLocation is highly configurable.
+						bgGeo.configure(callbackFn, failureFn, {
+							desiredAccuracy: 10,
+							stationaryRadius: 20,
+							distanceFilter: 30,
+							debug: true // <-- enable this hear sounds for background-geolocation life-cycle.
+						});
+
+						// Turn ON the background-geolocation system.  The user will be tracked whenever they suspend the app.
+						bgGeo.start();
+
+						// If you wish to turn OFF background-tracking, call the #stop method.
+						// bgGeo.stop()
 					}
 
-				},
-				// Update DOM em um evento recebeu
-				receivedEvent: function(id) {
-					var parentElement = document.getElementById(id);
-					var listeningElement = parentElement.querySelector('.listening');
-					var receivedElement = parentElement.querySelector('.received');
-
-					listeningElement.setAttribute('style', 'display:none;');
-					receivedElement.setAttribute('style', 'display:block;');
-
-					console.log('Received Event: ' + id);
-				},
-				configureBackgroundGeoLocation: function() {
-					// Seu aplicativo deve executar pelo menos uma chamada para a posição atual via geolocalização Cordova padrão,
-					// a fim de solicitar ao usuário Localização permissão.
-					window.navigator.geolocation.getCurrentPosition(function(location) {
-						console.log('Location from Phonegap');
-					});
-
-					bgGeo = window.plugins.backgroundGeoLocation;
-
-					/**
-					* Este seria o seu próprio retorno de chamada para AJAX pedidos depois de postar fundo de geolocalização ao seu servidor.
-					*/
-					var yourAjaxCallback = function(response) {
-						////
-						// IMPORTANT:  You must execute the #finish method here to inform the native plugin that you're finished,
-						//  and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
-						// IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
-						
-						// IMPORTANTE: Você deve executar o método #finish aqui para informar o plugin nativo que você está acabado,
-						// eo fundo-tarefa pode ser concluída. Você deve fazer isso independentemente se o seu pedido HTTP é bem sucedido ou não.
-						// Se não o fizer, ios irá travar o seu APP para passar muito tempo em segundo plano.
-						//
-						bgGeo.finish();
-					};
-
-					/**
-					* Este callback será executado toda vez que um de geolocalização é gravado em segundo plano.
-					*/
-					var callbackFn = function(location) {
-						console.log('[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude);
-						// Faça o seu pedido HTTP aqui para postar localização para o servidor.
-						yourAjaxCallback.call(this);
-					};
-
-					var failureFn = function(error) {
-						console.log('BackgroundGeoLocation error');
-					};
-					
-					// BackgroundGeoLocation is highly configurable.
-					bgGeo.configure(callbackFn, failureFn, {
-						desiredAccuracy: 10,
-						stationaryRadius: 20,
-						distanceFilter: 30,
-						debug: true // <-- ativar esse ouvir sons para o ciclo de vida de fundo-de geolocalização.
-					});
-
-					// Ligue o sistema de fundo-de geolocalização. O usuário será monitorado sempre que suspender a aplicação.
-					bgGeo.start();
-
-					// If you wish to turn OFF background-tracking, call the #stop method.
-					// bgGeo.stop()
 				};
-			};
-			
-			function parar() {
-			    alert(bgGeo);
-				alert('Parou!!!');
-			    bgGeo.stop();
-			}
+				
+				
+				app.initialize();
 		});
     </script>
 </head>

@@ -397,6 +397,16 @@ a[href].external:after {
   padding:0px 20px;
   width:200px;
 }
+.blink {
+    -webkit-animation: fade;
+    -webkit-animation-delay: initial;
+    -webkit-animation-direction: initial;
+    -webkit-animation-duration: 3000ms;
+    -webkit-animation-fill-mode: initial;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: fade;
+    -webkit-animation-timing-function: initial;
+}
 
 /*
 Class compatability tables "compat";

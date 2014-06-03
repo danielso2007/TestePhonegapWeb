@@ -76,6 +76,7 @@ will terminate when home button is pressed -->
 <gap:plugin name="org.apache.cordova.vibration" version="0.3.7" />
 <gap:plugin name="org.transistorsoft.cordova.background-geolocation" version="0.2.0" />
 
+
 	
 	<!-- Define app icon for each platform. -->
     <icon src="icon.png" />
