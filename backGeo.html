@@ -34,13 +34,9 @@
 		$(document).bind('pageinit', function () {
 
 		});
-		$(document).ready(function () {
-		    var bgGeo = null;
-
-			
+		$(document).ready(function () {	
 			$("#pararBt").click(function() {
-				 alert('Para!');
-				 alert(bgGeo);
+				 alert(window.plugins.backgroundGeoLocation);
 				 window.plugins.backgroundGeoLocation.stop();
 			});
 		
@@ -122,7 +118,7 @@
 							desiredAccuracy: 10,
 							stationaryRadius: 20,
 							distanceFilter: 30,
-							debug: true // <-- enable this hear sounds for background-geolocation life-cycle.
+							debug: false // <-- enable this hear sounds for background-geolocation life-cycle.
 						});
 
 						// Turn ON the background-geolocation system.  The user will be tracked whenever they suspend the app.
