@@ -35,13 +35,11 @@
 
 		});
 		$(document).ready(function () {
-		var bgGeo = null;
+		    var bgGeo = null;
 		
             function parar() {
-				if (watchID != null) {
-					navigator.geolocation.clearWatch(watchID);
-					watchID = null;
-				}
+			    alert('Para!');
+				bgGeo.stop();
 			};
 		
 			var app = {
@@ -78,41 +76,44 @@
 						receivedElement.setAttribute('style', 'display:block;');
 
 						console.log('Received Event: ' + id);
+						alert('Received Event: ' + id);
 					},
 					configureBackgroundGeoLocation: function() {
 						// Your app must execute AT LEAST ONE call for the current position via standard Cordova geolocation,
 						//  in order to prompt the user for Location permission.
 						window.navigator.geolocation.getCurrentPosition(function(location) {
 							console.log('Location from Phonegap');
+							alert('Location from Phonegap');
 						});
 
 						var bgGeo = window.plugins.backgroundGeoLocation;
 
 						/**
-						* This would be your own callback for Ajax-requests after POSTing background geolocation to your server.
+						* Este seria o seu próprio retorno de chamada para AJAX pedidos depois de postar fundo de geolocalização ao seu servidor.
 						*/
 						var yourAjaxCallback = function(response) {
 							////
 							// IMPORTANT:  You must execute the #finish method here to inform the native plugin that you're finished,
 							//  and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
 							// IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
-							//
-							//
+							alert(response);
 							bgGeo.finish();
 						};
 
 						/**
-						* This callback will be executed every time a geolocation is recorded in the background.
+						* Este callback será executado toda vez que um de geolocalização é gravado em segundo plano.
 						*/
 						var callbackFn = function(location) {
 							console.log('[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude);
-							// Do your HTTP request here to POST location to your server.
-							//
-							//
+                            alert('[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude);
+							var element = document.getElementById('result');
+				                element.innerHTML = '[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude + '<br />' +
+									'<hr />'  + element.innerHTML;
 							yourAjaxCallback.call(this);
 						};
 
 						var failureFn = function(error) {
+						    alert('BackgroundGeoLocation error');
 							console.log('BackgroundGeoLocation error');
 						}
 						
@@ -133,7 +134,6 @@
 
 				};
 				
-				
 				app.initialize();
 		});
     </script>
@@ -149,6 +149,8 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
+				<br/>
+				<p id="result">...</p>
 				<br/>
 				<br/>
 				<button onclick="parar();">Parar</button>
