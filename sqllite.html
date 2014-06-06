@@ -47,6 +47,7 @@
 
 		
 		$("#pararBt").click(function() {
+		alert('click');
 var db2 = window.openDatabase("cordova_bg_locations");
 db2.transaction(function (tx) {
 	   tx.executeSql('select loc from location loc;', [], function (tx, res) {
