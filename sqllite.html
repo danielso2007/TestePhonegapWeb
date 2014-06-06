@@ -73,6 +73,16 @@
 		$('#connec').attr('style', 'display:none;');
 		$('#dvRea').attr('style', 'display:block;');
 
+		$("#pararBt2").click(function() {
+			var db = window.sqlitePlugin.openDatabase({name: "cordova_bg_locations"});
+			db.transaction(function(tx) {
+				tx.executeSql("select count(id) as cnt from test_table;", [], function(tx, res) {
+				  console.log("res.rows.length: " + res.rows.length + " -- should be 1");
+				  console.log("res.rows.item(0).cnt: " + res.rows.item(0).cnt + " -- should be 1");
+				  $('#result').html($('#result').text() + '<br/>Tamanho: ' + res.rows.length);
+				});
+			  });
+		}
 		
 		$("#pararBt").click(function() {
 				 
@@ -147,6 +157,9 @@
 				<br/>
 				<br/>
 				<button id="pararBt">Analisar</button>
+				<br/>
+				<br/>
+				<button id="pararBt">Analisar2</button>
             </div>
 		</div>
 		<!-- /content -->
