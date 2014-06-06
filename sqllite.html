@@ -47,6 +47,26 @@
 
 		
 		$("#pararBt").click(function() {
+var db2 = window.openDatabase("cordova_bg_locations");
+db2.transaction(function (tx) {
+	   tx.executeSql('select loc from location loc;', [], function (tx, res) {
+		   console.log(results);
+		   if (res.rows.length > 0) {
+			  var result = res.rows.item(0).recordedAt 
+						     + 'Accuracy: ' + res.rows.item(0).accuracy 
+							 + 'Speed: ' +  res.rows.item(0).speed 
+							 + 'Lat: ' +  res.rows.item(0).latitude 
+							 + 'Lon: ' +  res.rows.item(0).longitude;
+					        //alert(result);
+							$('#result').html($('#result').text() + '<br/>' + result);
+		   }
+	   },  function(e) {
+				  alert(e.toString());
+				  alert("ERROR: " + e.message);
+				  $('#error').html('<br/>' + e);
+				});
+	});
+
 
 	  /*" id INTEGER PRIMARY KEY AUTOINCREMENT," +
         " recordedAt TEXT," +
