@@ -71,6 +71,7 @@
 				}, function(e) {
 				  alert(e.toString());
 				  alert("ERROR: " + e.message);
+				  $('#error').html('<br/>' + e);
 				});
 		     
 			//tx.executeSql('DROP TABLE IF EXISTS test_table');
@@ -115,6 +116,7 @@
 				<br/>
 				<p id="result">...</p>
 				<br/>
+				<p id="error"></p>
 				<br/>
 				<button id="pararBt">Analisar</button>
             </div>
