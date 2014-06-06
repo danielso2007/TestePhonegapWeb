@@ -35,6 +35,10 @@
 
 		});
 		$(document).ready(function () {	
+		    document.addEventListener("deviceready", onDeviceReady, false);
+		});
+		
+		function onDeviceReady() {
 			$("#pararBt").click(function() {
 				 alert(window.plugins.backgroundGeoLocation);
 				 window.plugins.backgroundGeoLocation.stop();
@@ -101,15 +105,15 @@
 						*/
 						var callbackFn = function(location) {
 							console.log('[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude);
-                            alert('[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude);
+							alert('[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude);
 							var element = document.getElementById('result');
-				                element.innerHTML = '[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude + '<br />' +
+								element.innerHTML = '[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude + '<br />' +
 									'<hr />'  + element.innerHTML;
 							yourAjaxCallback.call(this);
 						};
 
 						var failureFn = function(error) {
-						    alert('BackgroundGeoLocation error');
+							alert('BackgroundGeoLocation error');
 							console.log('BackgroundGeoLocation error');
 						}
 						
@@ -131,7 +135,7 @@
 				};
 				
 				app.initialize();
-		});
+		}
     </script>
 </head>
 

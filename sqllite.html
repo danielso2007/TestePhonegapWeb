@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teste</title>
+
+<link rel="stylesheet" href="css/jquery.mobile-1.4.1.min.css">
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.1.min.css">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/jqm-demos.css">  
+<link rel="stylesheet" href="css/index.css" />
+<link rel="stylesheet" href="css/prettify.css">
+
+<link rel="shortcut icon" href="icon.png">
+
+<script type="text/javascript" src="phonegap.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.1.min.js"></script>
+
+
+
+<script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+		    $.mobile.buttonMarkup.hoverDelay = true;
+		    $.mobile.touchOverflowEnabled = true;
+		    $.mobile.phonegapNavigationEnabled = true;
+		    $.mobile.pushStateEnabled = false;
+		    $.mobile.ajaxEnabled = false;
+		});
+		$(document).bind('pageinit', function () {
+
+		});
+		$(document).ready(function () {
+		    $('#dvRea').attr('style', 'display:none;');
+		    document.addEventListener("deviceready", onDeviceReady, false);
+		});
+		
+		function onDeviceReady() {
+		var db = window.sqlitePlugin.openDatabase({name: "cordova_bg_locations"});
+		
+		$('#connec').attr('style', 'display:none;');
+		$('#dvRea').attr('style', 'display:block;');
+
+		
+		$("#pararBt").click(function() {
+				 
+
+	  /*" id INTEGER PRIMARY KEY AUTOINCREMENT," +
+        " recordedAt TEXT," +
+        " accuracy TEXT," +
+        " speed TEXT," +
+        " latitude TEXT," +
+        " longitude TEXT";*/
+		  
+		  db.transaction(function(tx) {
+		        tx.executeSql("select loc from location loc;", [], function(tx, res) {
+                    alert(res.rows.length);
+					if (res.rows.length > 0) {
+					    for (x = 0; x < res.rows.length; x++) {
+						     var result = res.rows.item(0).recordedAt 
+						     + 'Accuracy: ' + res.rows.item(0).accuracy 
+							 + 'Speed: ' +  res.rows.item(0).speed 
+							 + 'Lat: ' +  res.rows.item(0).latitude 
+							 + 'Lon: ' +  res.rows.item(0).longitude;
+					        //alert(result);
+							$('#result').html($('#result').text() + '<br/>' + result);
+						}
+					}
+				}, function(e) {
+				  alert("ERROR: " + e.message);
+				});
+		     
+			//tx.executeSql('DROP TABLE IF EXISTS test_table');
+			//tx.executeSql('CREATE TABLE IF NOT EXISTS test_table (id integer primary key, data text, data_num integer)');
+
+			// demonstrate PRAGMA:
+			//db.executeSql("pragma table_info (test_table);", [], function(res) {
+			  //console.log("PRAGMA res: " + JSON.stringify(res));
+			//});
+
+			/*tx.executeSql("INSERT INTO test_table (data, data_num) VALUES (?,?)", ["test", 100], function(tx, res) {
+			  console.log("insertId: " + res.insertId + " -- probably 1");
+			  console.log("rowsAffected: " + res.rowsAffected + " -- should be 1");
+
+			  db.transaction(function(tx) {
+				tx.executeSql("select count(id) as cnt from test_table;", [], function(tx, res) {
+				  console.log("res.rows.length: " + res.rows.length + " -- should be 1");
+				  console.log("res.rows.item(0).cnt: " + res.rows.item(0).cnt + " -- should be 1");
+				});
+			  });
+
+			}, function(e) {
+			  console.log("ERROR: " + e.message);
+			});
+			*/
+			});
+		  });
+		}
+    </script>
+</head>
+
+<body>
+
+	<!-- Start of first page: #one -->
+	<div data-role="page" id="pageButtonsLogin" data-theme="a">
+
+		<div role="main" class="ui-content">
+			<h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening" id="connec">Connecting to Device</p>
+                <p class="event received" id="dvRea">Device is Ready</p>
+				<br/>
+				<p id="result">...</p>
+				<br/>
+				<br/>
+				<button id="pararBt">Analisar</button>
+            </div>
+		</div>
+		<!-- /content -->
+
+	</div>
+	<!-- /page one -->
+
+
+
+</body>
+</html>
+
