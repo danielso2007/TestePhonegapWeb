@@ -40,8 +40,7 @@
 		});
 		
 		function onDeviceReady() {
-		var db = window.sqlitePlugin.openDatabase({name: "cordova_bg_locations"});
-		
+		var db = window.sqlitePlugin.openDatabase({name: "DB"});
 		
 		db.transaction(function(tx) {
         tx.executeSql('DROP TABLE IF EXISTS test_table');
@@ -50,6 +49,7 @@
         // demonstrate PRAGMA:
         db.executeSql("pragma table_info (test_table);", [], function(res) {
           console.log("PRAGMA res: " + JSON.stringify(res));
+		  alert("PRAGMA res: " + JSON.stringify(res));
         });
 
         tx.executeSql("INSERT INTO test_table (data, data_num) VALUES (?,?)", ["test", 100], function(tx, res) {
@@ -74,19 +74,20 @@
 		$('#dvRea').attr('style', 'display:block;');
 
 		$("#pararBt2").click(function() {
-			var db = window.sqlitePlugin.openDatabase({name: "cordova_bg_locations"});
-			db.transaction(function(tx) {
+			var db3 = window.sqlitePlugin.openDatabase({name: "DB"});
+			db3.transaction(function(tx) {
 				tx.executeSql("select count(id) as cnt from test_table;", [], function(tx, res) {
 				  alert(res.rows.length);
 				  console.log("res.rows.length: " + res.rows.length + " -- should be 1");
 				  console.log("res.rows.item(0).cnt: " + res.rows.item(0).cnt + " -- should be 1");
 				  $('#result').html($('#result').text() + '<br/>Tamanho: ' + res.rows.length);
 				});
-			  });
+			  }, function(e) {
+				  console.log("ERROR: " + e.message);
+				});
 		}
 		
 		$("#pararBt").click(function() {
-				 
 
 	  /*" id INTEGER PRIMARY KEY AUTOINCREMENT," +
         " recordedAt TEXT," +
