@@ -55,7 +55,7 @@
         " speed TEXT," +
         " latitude TEXT," +
         " longitude TEXT";*/
-		  
+		  var db = window.sqlitePlugin.openDatabase({name: "cordova_bg_locations"});
 		  db.transaction(function(tx) {
 		        tx.executeSql("select loc from location loc;", [], function(tx, res) {
                     alert(res.rows.length);
@@ -71,7 +71,7 @@
 						}
 					}
 				}, function(e) {
-				  alert(e);
+				  alert(e.toString());
 				  alert("ERROR: " + e.message);
 				});
 		     

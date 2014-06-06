@@ -92,6 +92,7 @@
 						* Este seria o seu próprio retorno de chamada para AJAX pedidos depois de postar fundo de geolocalização ao seu servidor.
 						*/
 						var yourAjaxCallback = function(response) {
+						    alert('yourAjaxCallback');
 							////
 							// IMPORTANT:  You must execute the #finish method here to inform the native plugin that you're finished,
 							//  and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
@@ -104,6 +105,7 @@
 						* Este callback será executado toda vez que um de geolocalização é gravado em segundo plano.
 						*/
 						var callbackFn = function(location) {
+						    alert('callbackFn');
 							console.log('[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude);
 							alert('[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude);
 							var element = document.getElementById('result');
@@ -113,6 +115,7 @@
 						};
 
 						var failureFn = function(error) {
+						    alert(error);
 							alert('BackgroundGeoLocation error');
 							console.log('BackgroundGeoLocation error');
 						}
