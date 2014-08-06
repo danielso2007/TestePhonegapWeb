@@ -58,8 +58,8 @@
 				element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
 									'Longitude: ' + position.coords.longitude     + '<br />' +
 									'<hr />'      + element.innerHTML;
-									setTimeout(navigator.notification.beep(1),101);
-            setTimeout(navigator.notification.vibrate(1000),102);
+	            setTimeout(navigator.notification.beep(1),99);
+	            setTimeout(navigator.notification.vibrate(500),102);
 			}
 
 			// clear the watch that was started earlier
@@ -103,7 +103,7 @@
 </head>
 
 <body>
-
+ 
 	<!-- Start of first page: #one -->
 	<div data-role="page" id="pageButtonsLogin" data-theme="a">
 

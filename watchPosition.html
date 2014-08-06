@@ -57,8 +57,9 @@
 				element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
 									'Longitude: ' + position.coords.longitude     + '<br />' +
 									'<hr />'      + element.innerHTML;
-	            setTimeout(navigator.notification.beep(1),100);
-                setTimeout(navigator.notification.vibrate(1000),100);
+									
+	            setTimeout(navigator.notification.beep(1),99);
+	            setTimeout(navigator.notification.vibrate(500),102);
 			}
 
 				// onError Callback receives a PositionError object
@@ -117,7 +118,6 @@
 <br/>
 <b>String:</b> retorna um ID de relógio que faz referência o intervalo de posição de observação. O ID de relógio deve ser usado com geolocation.clearWatch parar de assistir a mudanças na posição.
 
-
 </p>
 <p>
 <b>Descrição</b><br/>
@@ -144,6 +144,7 @@
 
 	</div>
 	<!-- /page one -->
+
 
 
 
