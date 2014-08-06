@@ -58,6 +58,8 @@
 				element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
 									'Longitude: ' + position.coords.longitude     + '<br />' +
 									'<hr />'      + element.innerHTML;
+									setTimeout(navigator.notification.beep(1),101);
+            setTimeout(navigator.notification.vibrate(1000),102);
 			}
 
 			// clear the watch that was started earlier
@@ -137,4 +139,5 @@ O geolocation.clearWatch pára assistindo mudanças para a localização do disp
 
 </body>
 </html>
+
 
