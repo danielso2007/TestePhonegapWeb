@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Teste</title>
 
 <link rel="stylesheet" href="css/jquery.mobile-1.4.1.min.css">
@@ -16,59 +16,61 @@
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.mobile-1.4.1.min.js"></script>
 
-<script async defer src=js/code.index.js></script>
+<script async defer src="js/code.index.js"></script>
 </head>
 <body>
-	<div data-role=page id=pageButtonsLogin data-theme=a>
-		<div role=main class=ui-content>
+	<div data-role="page" id="pageButtonsLogin" data-theme="a">
+		<div role="main" class="ui-content">
 			<div>
-				<div class=center style="margin-top: 2.0em">
+				<div class="center" style="margin-top: 2.0em">
 					<h1>Informações:</h1>
-					<p id=deviceProperties>Loading device properties...</p>
+					<p id="deviceProperties">Loading device properties...</p>
 				</div>
 				<div>
-				    <button id=page01 data-role=button data-shadow=false data-corners=false onclick="document.location.href='gps.html'">Geolocation GetCurrentPosition</button>
-					<button id=page01 data-role=button data-shadow=false data-corners=false onclick="document.location.href='watchPosition.html'">Geolocation WatchPosition</button>
-					<button id=page01 data-role=button data-shadow=false data-corners=false onclick="document.location.href='GeolocationClearWatch.html'">Geolocation Clear Watch</button>
-				    <button id=page01 data-role=button data-shadow=false data-corners=false onclick="document.location.href='Coordinates.html'">Coordinates</button>	
-					<button id=page01 data-role=button data-shadow=false data-corners=false onclick="document.location.href='Position.html'">Position</button>	
+				    <button id="page01" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='gps.html'">Geolocation GetCurrentPosition</button>
+					<button id="page01" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='watchPosition.html'">Geolocation WatchPosition</button>
+					<button id="page01" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='GeolocationClearWatch.html'">Geolocation Clear Watch</button>
+				    <button id="page01" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='Coordinates.html'">Coordinates</button>	
+					<button id="page01" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='Position.html'">Position</button>	
 					
 
 					
-					<button id=page01 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page01.html'">Accelerometer GetCurrentAcceleration</button>
-					<button id=page02 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page02.html'">Accelerometer WatchAcceleration</button>
-					<button id=page03 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page03.html'">Accelerometer ClearWatch</button>
-					<button id=page04 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page04.html'">Accelerometer Acceleration</button>
-					<button id=page05 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page05.html'">Camera GetPicture</button>
-					<button id=page06 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page06.html'">Connection Type</button>
-					<button id=page07 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page07.html'">Device Cordovae</button>
-					<button id=page08 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page08.html'">Verificar status online/offline e Botão Back</button>
-					<button id=page09 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page09.html'">AddEventListener</button>
-					<button id=page10 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page10.html'">RemoveEventListener</button>
-					<button id=page11 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page11.html'">Notification Alert</button>
-					<button id=page12 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page12.html'">Notification Confirm</button>
-					<button id=page13 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page13.html'">Notification Prompt</button>
-					<button id=page14 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page14.html'">Notification Beep</button>
-					<button id=page15 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page15.html'">Notification Vibrate</button>
-					<button id=page16 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page16.html'">FileTransfer Upload</button>
-					<button id=page17 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page17.html'">FileTransfer Download</button>
-					<button id=page18 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page18.html'">Open Database</button>
-					<button id=page19 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page19.html'">SQLTransaction</button>
-					<button id=page20 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page20.html'">SQLResultSet</button>
-					<button id=page21 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page21.html'">SQLResultSetRowList</button>
-					<button id=page22 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page22.html'">LocalStorage</button>
-					<button id=page23 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page23.html'">Text inputs</button>
-					<button id=page24 data-role=button data-shadow=false data-corners=false onclick="document.location.href='page24.html'">Datepicker Widget</button>
+					<button id="page01" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page01.html'">Accelerometer GetCurrentAcceleration</button>
+					<button id="page02" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page02.html'">Accelerometer WatchAcceleration</button>
+					<button id="page03" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page03.html'">Accelerometer ClearWatch</button>
+					<button id="page04" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page04.html'">Accelerometer Acceleration</button>
+					<button id="page05" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page05.html'">Camera GetPicture</button>
+					<button id="page06" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page06.html'">Connection Type</button>
+					<button id="page07" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page07.html'">Device Cordovae</button>
+					<button id="page08" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page08.html'">Verificar status online/offline e Botão Back</button>
+					<button id="page09" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page09.html'">AddEventListener</button>
+					<button id="page10" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page10.html'">RemoveEventListener</button>
+					<button id="page11" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page11.html'">Notification Alert</button>
+					<button id="page12" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page12.html'">Notification Confirm</button>
+					<button id="page13" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page13.html'">Notification Prompt</button>
+					<button id="page14" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page14.html'">Notification Beep</button>
+					<button id="page15" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page15.html'">Notification Vibrate</button>
+					<button id="page16" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page16.html'">FileTransfer Upload</button>
+					<button id="page17" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page17.html'">FileTransfer Download</button>
+					<button id="page18" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page18.html'">Open Database</button>
+					<button id="page19" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page19.html'">SQLTransaction</button>
+					<button id="page20" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page20.html'">SQLResultSet</button>
+					<button id="page21" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page21.html'">SQLResultSetRowList</button>
+					<button id="page22" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page22.html'">LocalStorage</button>
+					<button id="page23" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page23.html'">Text inputs</button>
+					<button id="page24" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='page24.html'">Datepicker Widget</button>
 					
-					<button id=page24 data-role=button data-shadow=false data-corners=false onclick="document.location.href='batterycritical.html'">Battery Critical</button>
-					<button id=page24 data-role=button data-shadow=false data-corners=false onclick="document.location.href='batterylow.html'">Battery Low</button>
-					<button id=page24 data-role=button data-shadow=false data-corners=false onclick="document.location.href='batterystatus.html'">Battery Status</button>
-					<button id=page24 data-role=button data-shadow=false data-corners=false onclick="document.location.href='LocalNotification.html'">Local Notification</button>
-					<button id=page24 data-role=button data-shadow=false data-corners=false onclick="document.location.href='Toast.html'">Toast</button>
-					<button id=page24 data-role=button data-shadow=false data-corners=false onclick="document.location.href='backGeo.html'">Background Geolocation</button>
-					<button id=page24 data-role=button data-shadow=false data-corners=false onclick="document.location.href='sqllite.html'">SQLitePlugin</button>
-					<button id=page24 data-role=button data-shadow=false data-corners=false onclick="document.location.href='WebWorker.html'">Web Worker</button>
-					
+					<button id="page25" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='batterycritical.html'">Battery Critical</button>
+					<button id="page26" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='batterylow.html'">Battery Low</button>
+					<button id="page27" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='batterystatus.html'">Battery Status</button>
+					<button id="page28" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='LocalNotification.html'">Local Notification</button>
+					<button id="page29" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='Toast.html'">Toast</button>
+					<button id="page30" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='backGeo.html'">Background Geolocation</button>
+					<button id="page31" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='sqllite.html'">SQLitePlugin</button>
+					<button id="page32" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='WebWorker.html'">Web Worker</button>
+				
+				    <button id="page33" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='eventPause.html'">Event Pause</button>
+				    <button id="page33" data-role="button" data-shadow="false" data-corners="false" onclick="document.location.href='eventResume.html'">Event Resume</button>		
 				</div>
 			</div>
 		</div>
